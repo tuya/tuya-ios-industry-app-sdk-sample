@@ -76,7 +76,7 @@ pod install
    **1.** Go to **Projects** > **API Products** > **All Products**, click **Industry Project**, and subscribe to your desired API products.
 	![image.png](https://images.tuyacn.com/app/Hanh/APIproducts.png)
 	
-	**You need to subscribe to these API Products for [Tuya Home Assistant](https://github.com/tuya/tuya-home-assistant) and [Tuya Home Bridge](https://github.com/tuya/tuya-homebridge) integrations**
+	**You need to subscribe to these API Products to use this sample.**
 	
 	![image.png](https://images.tuyacn.com/app/hass/open_api_products.jpg)
 	
