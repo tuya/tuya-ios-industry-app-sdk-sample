@@ -1,0 +1,9 @@
+
+/* Class = "UINavigationItem"; title = "AP Mode"; ObjectID = "680-XY-1vF"; */
+"680-XY-1vF.title" = "AP Mode";
+
+/* Class = "UILabel"; text = "Use the camera device to scan the QR code of the APP to transfer the Configuration information to active and bind the camera device."; ObjectID = "Wt6-Fs-vmh"; */
+"Wt6-Fs-vmh.text" = "Use the camera device to scan the QR code of the APP to transfer the Configuration information to active and bind the camera device.";
+
+/* Class = "UIBarButtonItem"; title = "Search"; ObjectID = "yDc-bw-Ssc"; */
+"yDc-bw-Ssc.title" = "Search";

@@ -1,0 +1,955 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A3C85738FBDEB2A4C8C23E49 /* libPods-TuyaIoTAppSDKSample-iOS-Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D98304E8A4DDF558E317939 /* libPods-TuyaIoTAppSDKSample-iOS-Swift.a */; };
+		BB7D0DD3262D1D340014490B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0DD2262D1D340014490B /* AppDelegate.swift */; };
+		BB7D0DD5262D1D340014490B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0DD4262D1D340014490B /* SceneDelegate.swift */; };
+		BB7D0DDC262D1D370014490B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB7D0DDB262D1D370014490B /* Assets.xcassets */; };
+		BB7D0E89262D1F7F0014490B /* DeviceDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0E1F262D1F7E0014490B /* DeviceDetailTableViewController.swift */; };
+		BB7D0E8A262D1F7F0014490B /* DeviceControlCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0E20262D1F7E0014490B /* DeviceControlCell.swift */; };
+		BB7D0E8B262D1F7F0014490B /* LabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0E22262D1F7E0014490B /* LabelTableViewCell.swift */; };
+		BB7D0E8C262D1F7F0014490B /* SliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0E23262D1F7E0014490B /* SliderTableViewCell.swift */; };
+		BB7D0E8D262D1F7F0014490B /* DeviceStatusBehaveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0E24262D1F7E0014490B /* DeviceStatusBehaveCell.swift */; };
+		BB7D0E8E262D1F7F0014490B /* StringTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0E25262D1F7E0014490B /* StringTableViewCell.swift */; };
+		BB7D0E8F262D1F7F0014490B /* EnumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0E26262D1F7E0014490B /* EnumTableViewCell.swift */; };
+		BB7D0E90262D1F7F0014490B /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0E27262D1F7E0014490B /* SwitchTableViewCell.swift */; };
+		BB7D0E91262D1F7F0014490B /* DeviceListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0E28262D1F7E0014490B /* DeviceListTableViewController.swift */; };
+		BB7D0E92262D1F7F0014490B /* DeviceControlTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0E29262D1F7E0014490B /* DeviceControlTableViewController.swift */; };
+		BB7D0E93262D1F7F0014490B /* APModeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0E2B262D1F7E0014490B /* APModeTableViewController.swift */; };
+		BB7D0E9A262D1F7F0014490B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0E32262D1F7E0014490B /* MainViewController.swift */; };
+		BB7D0E9B262D1F7F0014490B /* TuyaSmartMainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0E33262D1F7E0014490B /* TuyaSmartMainTableViewController.swift */; };
+		BB7D0EA5262D1F7F0014490B /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0E3F262D1F7E0014490B /* LoginTableViewController.swift */; };
+		BB7D0EA7262D1F7F0014490B /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0E42262D1F7E0014490B /* UIButtonExtension.swift */; };
+		BB7D0EA8262D1F7F0014490B /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0E43262D1F7E0014490B /* Alert.swift */; };
+		BB7D0EA9262D1F7F0014490B /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0E44262D1F7E0014490B /* NotificationName.swift */; };
+		BB7D0EAA262D1F7F0014490B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0E45262D1F7E0014490B /* UIViewControllerExtension.swift */; };
+		BB7D0ED3262D1F8A0014490B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB7D0ECF262D1F8A0014490B /* InfoPlist.strings */; };
+		BB7D0ED4262D1F8A0014490B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB7D0ED1262D1F8A0014490B /* Localizable.strings */; };
+		BB7D101B262D225A0014490B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7D0FEA262D225A0014490B /* LaunchScreen.storyboard */; };
+		BB7D101C262D225A0014490B /* TuyaSmartMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7D0FEC262D225A0014490B /* TuyaSmartMain.storyboard */; };
+		BB7D101D262D225A0014490B /* DeviceList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7D0FEE262D225A0014490B /* DeviceList.storyboard */; };
+		BB7D1020262D225A0014490B /* APMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7D0FF4262D225A0014490B /* APMode.storyboard */; };
+		BB7D1022262D225A0014490B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7D0FF8262D225A0014490B /* Main.storyboard */; };
+		BB7D1024262D225A0014490B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7D0FFC262D225A0014490B /* Login.storyboard */; };
+		BB7D1067262D26B20014490B /* NewAsset.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7D1069262D26B20014490B /* NewAsset.storyboard */; };
+		BB7D108C262D2D420014490B /* AssetList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7D108E262D2D420014490B /* AssetList.storyboard */; };
+		BB7D1098262D2F5F0014490B /* AssetListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D1097262D2F5F0014490B /* AssetListTableViewController.swift */; };
+		BB7D109D262D2F700014490B /* SwitchAssetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D109C262D2F700014490B /* SwitchAssetTableViewController.swift */; };
+		BB7D10C7262D369C0014490B /* SwitchAsset.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7D10C9262D369C0014490B /* SwitchAsset.storyboard */; };
+		BB7D10D6262D54EF0014490B /* QRMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7D10D8262D54EF0014490B /* QRMode.storyboard */; };
+		BB7D10DF262D554C0014490B /* QRModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D10DE262D554C0014490B /* QRModelViewController.swift */; };
+		BB7D11B6262FD6220014490B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D11B5262FD6220014490B /* UserModel.swift */; };
+		BBE8386826318515007D7831 /* NetworkInformation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBE8386726318515007D7831 /* NetworkInformation.storyboard */; };
+		BBE83878263186DE007D7831 /* NetworkInformationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE83877263186DE007D7831 /* NetworkInformationTableViewController.swift */; };
+		BBFCE3F02637B24100A0AF71 /* AppKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFCE3EF2637B24100A0AF71 /* AppKey.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BB7D0DE6262D1D370014490B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB7D0DC7262D1D340014490B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB7D0DCE262D1D340014490B;
+			remoteInfo = TuyaSaaSAppSDKSample;
+		};
+		BB7D0DF1262D1D370014490B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB7D0DC7262D1D340014490B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB7D0DCE262D1D340014490B;
+			remoteInfo = TuyaSaaSAppSDKSample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C4758EA0F5B7FB11E13D71A /* Pods-TuyaSaaSAppSDKSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaSaaSAppSDKSample.release.xcconfig"; path = "Target Support Files/Pods-TuyaSaaSAppSDKSample/Pods-TuyaSaaSAppSDKSample.release.xcconfig"; sourceTree = "<group>"; };
+		1D98304E8A4DDF558E317939 /* libPods-TuyaIoTAppSDKSample-iOS-Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TuyaIoTAppSDKSample-iOS-Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A2BC0AEEC460C0B1934A360 /* Pods-TuyaIoTAppSDKSample-iOS-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaIoTAppSDKSample-iOS-Swift.debug.xcconfig"; path = "Target Support Files/Pods-TuyaIoTAppSDKSample-iOS-Swift/Pods-TuyaIoTAppSDKSample-iOS-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		99324FBD85CD48E805150EC9 /* Pods-TuyaSaaSAppSDKSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaSaaSAppSDKSample.debug.xcconfig"; path = "Target Support Files/Pods-TuyaSaaSAppSDKSample/Pods-TuyaSaaSAppSDKSample.debug.xcconfig"; sourceTree = "<group>"; };
+		BB29170E263AF408002AE1A8 /* TuyaIoTAppSDKSample-iOS-Swift_Bridging_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TuyaIoTAppSDKSample-iOS-Swift_Bridging_Header.h"; sourceTree = "<group>"; };
+		BB7D0DCF262D1D340014490B /* TuyaIoTAppSDKSample-iOS-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TuyaIoTAppSDKSample-iOS-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB7D0DD2262D1D340014490B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BB7D0DD4262D1D340014490B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BB7D0DDB262D1D370014490B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BB7D0DE0262D1D370014490B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB7D0DE5262D1D370014490B /* TuyaIoTAppSDKSample-iOS-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TuyaIoTAppSDKSample-iOS-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB7D0DF0262D1D370014490B /* TuyaIoTAppSDKSample-iOS-SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TuyaIoTAppSDKSample-iOS-SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB7D0E1F262D1F7E0014490B /* DeviceDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDetailTableViewController.swift; sourceTree = "<group>"; };
+		BB7D0E20262D1F7E0014490B /* DeviceControlCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceControlCell.swift; sourceTree = "<group>"; };
+		BB7D0E22262D1F7E0014490B /* LabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelTableViewCell.swift; sourceTree = "<group>"; };
+		BB7D0E23262D1F7E0014490B /* SliderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderTableViewCell.swift; sourceTree = "<group>"; };
+		BB7D0E24262D1F7E0014490B /* DeviceStatusBehaveCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceStatusBehaveCell.swift; sourceTree = "<group>"; };
+		BB7D0E25262D1F7E0014490B /* StringTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringTableViewCell.swift; sourceTree = "<group>"; };
+		BB7D0E26262D1F7E0014490B /* EnumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumTableViewCell.swift; sourceTree = "<group>"; };
+		BB7D0E27262D1F7E0014490B /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		BB7D0E28262D1F7E0014490B /* DeviceListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceListTableViewController.swift; sourceTree = "<group>"; };
+		BB7D0E29262D1F7E0014490B /* DeviceControlTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceControlTableViewController.swift; sourceTree = "<group>"; };
+		BB7D0E2B262D1F7E0014490B /* APModeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APModeTableViewController.swift; sourceTree = "<group>"; };
+		BB7D0E32262D1F7E0014490B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BB7D0E33262D1F7E0014490B /* TuyaSmartMainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TuyaSmartMainTableViewController.swift; sourceTree = "<group>"; };
+		BB7D0E3F262D1F7E0014490B /* LoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
+		BB7D0E42262D1F7E0014490B /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		BB7D0E43262D1F7E0014490B /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		BB7D0E44262D1F7E0014490B /* NotificationName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
+		BB7D0E45262D1F7E0014490B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		BB7D0ED0262D1F8A0014490B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		BB7D0ED2262D1F8A0014490B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		BB7D0FEB262D225A0014490B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BB7D0FED262D225A0014490B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TuyaSmartMain.storyboard; sourceTree = "<group>"; };
+		BB7D0FEF262D225A0014490B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/DeviceList.storyboard; sourceTree = "<group>"; };
+		BB7D0FF5262D225A0014490B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/APMode.storyboard; sourceTree = "<group>"; };
+		BB7D0FF9262D225A0014490B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BB7D0FFD262D225A0014490B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
+		BB7D1031262D22AB0014490B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		BB7D1033262D22CC0014490B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		BB7D1034262D22D00014490B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/TuyaSmartMain.strings"; sourceTree = "<group>"; };
+		BB7D1038262D22F90014490B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/DeviceList.strings"; sourceTree = "<group>"; };
+		BB7D103A262D23030014490B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/APMode.strings"; sourceTree = "<group>"; };
+		BB7D103D262D23140014490B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Login.strings"; sourceTree = "<group>"; };
+		BB7D106D262D26B90014490B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/NewAsset.storyboard; sourceTree = "<group>"; };
+		BB7D106F262D26F60014490B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/NewAsset.strings"; sourceTree = "<group>"; };
+		BB7D108D262D2D420014490B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AssetList.storyboard; sourceTree = "<group>"; };
+		BB7D1093262D2D4C0014490B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/AssetList.strings"; sourceTree = "<group>"; };
+		BB7D1097262D2F5F0014490B /* AssetListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetListTableViewController.swift; sourceTree = "<group>"; };
+		BB7D109C262D2F700014490B /* SwitchAssetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchAssetTableViewController.swift; sourceTree = "<group>"; };
+		BB7D10C8262D369C0014490B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SwitchAsset.storyboard; sourceTree = "<group>"; };
+		BB7D10CD262D36A50014490B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SwitchAsset.strings"; sourceTree = "<group>"; };
+		BB7D10D7262D54EF0014490B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/QRMode.storyboard; sourceTree = "<group>"; };
+		BB7D10DD262D54FA0014490B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/QRMode.strings"; sourceTree = "<group>"; };
+		BB7D10DE262D554C0014490B /* QRModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRModelViewController.swift; sourceTree = "<group>"; };
+		BB7D11B5262FD6220014490B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		BBE8386726318515007D7831 /* NetworkInformation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NetworkInformation.storyboard; sourceTree = "<group>"; };
+		BBE83877263186DE007D7831 /* NetworkInformationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInformationTableViewController.swift; sourceTree = "<group>"; };
+		BBFCE3EF2637B24100A0AF71 /* AppKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppKey.swift; sourceTree = "<group>"; };
+		F6FC32CA6BC803EF5F6EE94D /* Pods-TuyaIoTAppSDKSample-iOS-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaIoTAppSDKSample-iOS-Swift.release.xcconfig"; path = "Target Support Files/Pods-TuyaIoTAppSDKSample-iOS-Swift/Pods-TuyaIoTAppSDKSample-iOS-Swift.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB7D0DCC262D1D340014490B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3C85738FBDEB2A4C8C23E49 /* libPods-TuyaIoTAppSDKSample-iOS-Swift.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB7D0DE2262D1D370014490B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB7D0DED262D1D370014490B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52CD6C15C633AB025A201E98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D98304E8A4DDF558E317939 /* libPods-TuyaIoTAppSDKSample-iOS-Swift.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC81BC28FB1A63EA471CEFF0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				99324FBD85CD48E805150EC9 /* Pods-TuyaSaaSAppSDKSample.debug.xcconfig */,
+				0C4758EA0F5B7FB11E13D71A /* Pods-TuyaSaaSAppSDKSample.release.xcconfig */,
+				3A2BC0AEEC460C0B1934A360 /* Pods-TuyaIoTAppSDKSample-iOS-Swift.debug.xcconfig */,
+				F6FC32CA6BC803EF5F6EE94D /* Pods-TuyaIoTAppSDKSample-iOS-Swift.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BB7D0DC6262D1D340014490B = {
+			isa = PBXGroup;
+			children = (
+				BB7D0DD1262D1D340014490B /* TuyaIoTAppSDKSample-iOS-Swift */,
+				BB7D0DD0262D1D340014490B /* Products */,
+				AC81BC28FB1A63EA471CEFF0 /* Pods */,
+				52CD6C15C633AB025A201E98 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BB7D0DD0262D1D340014490B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB7D0DCF262D1D340014490B /* TuyaIoTAppSDKSample-iOS-Swift.app */,
+				BB7D0DE5262D1D370014490B /* TuyaIoTAppSDKSample-iOS-SwiftTests.xctest */,
+				BB7D0DF0262D1D370014490B /* TuyaIoTAppSDKSample-iOS-SwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB7D0DD1262D1D340014490B /* TuyaIoTAppSDKSample-iOS-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				BBFCE3EF2637B24100A0AF71 /* AppKey.swift */,
+				BB7D0DD2262D1D340014490B /* AppDelegate.swift */,
+				BB7D0DD4262D1D340014490B /* SceneDelegate.swift */,
+				BB7D0FC7262D225A0014490B /* StoryBoard */,
+				BB7D0E1D262D1F7E0014490B /* ViewController */,
+				BB7D11B4262FD5D20014490B /* Model */,
+				BB7D0E41262D1F7E0014490B /* Helper */,
+				BB7D0DDB262D1D370014490B /* Assets.xcassets */,
+				BB7D0DE0262D1D370014490B /* Info.plist */,
+				BB7D0ECF262D1F8A0014490B /* InfoPlist.strings */,
+				BB7D0ED1262D1F8A0014490B /* Localizable.strings */,
+				BB29170E263AF408002AE1A8 /* TuyaIoTAppSDKSample-iOS-Swift_Bridging_Header.h */,
+			);
+			path = "TuyaIoTAppSDKSample-iOS-Swift";
+			sourceTree = "<group>";
+		};
+		BB7D0E1D262D1F7E0014490B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BB7D0E1E262D1F7E0014490B /* Device Management */,
+				BB7D0E2A262D1F7E0014490B /* Device Network Configuration */,
+				BB7D0E32262D1F7E0014490B /* MainViewController.swift */,
+				BB7D0E33262D1F7E0014490B /* TuyaSmartMainTableViewController.swift */,
+				BB7D1073262D289F0014490B /* Asset Management */,
+				BB7D0E3B262D1F7E0014490B /* User Management */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		BB7D0E1E262D1F7E0014490B /* Device Management */ = {
+			isa = PBXGroup;
+			children = (
+				BB7D0E21262D1F7E0014490B /* Cell */,
+				BB7D0E28262D1F7E0014490B /* DeviceListTableViewController.swift */,
+				BB7D0E29262D1F7E0014490B /* DeviceControlTableViewController.swift */,
+				BB7D0E1F262D1F7E0014490B /* DeviceDetailTableViewController.swift */,
+			);
+			path = "Device Management";
+			sourceTree = "<group>";
+		};
+		BB7D0E21262D1F7E0014490B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BB7D0E20262D1F7E0014490B /* DeviceControlCell.swift */,
+				BB7D0E22262D1F7E0014490B /* LabelTableViewCell.swift */,
+				BB7D0E23262D1F7E0014490B /* SliderTableViewCell.swift */,
+				BB7D0E24262D1F7E0014490B /* DeviceStatusBehaveCell.swift */,
+				BB7D0E25262D1F7E0014490B /* StringTableViewCell.swift */,
+				BB7D0E26262D1F7E0014490B /* EnumTableViewCell.swift */,
+				BB7D0E27262D1F7E0014490B /* SwitchTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BB7D0E2A262D1F7E0014490B /* Device Network Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				BBE83877263186DE007D7831 /* NetworkInformationTableViewController.swift */,
+				BB7D0E2B262D1F7E0014490B /* APModeTableViewController.swift */,
+				BB7D10DE262D554C0014490B /* QRModelViewController.swift */,
+			);
+			path = "Device Network Configuration";
+			sourceTree = "<group>";
+		};
+		BB7D0E3B262D1F7E0014490B /* User Management */ = {
+			isa = PBXGroup;
+			children = (
+				BB7D0E3F262D1F7E0014490B /* LoginTableViewController.swift */,
+			);
+			path = "User Management";
+			sourceTree = "<group>";
+		};
+		BB7D0E41262D1F7E0014490B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				BB7D0E42262D1F7E0014490B /* UIButtonExtension.swift */,
+				BB7D0E43262D1F7E0014490B /* Alert.swift */,
+				BB7D0E44262D1F7E0014490B /* NotificationName.swift */,
+				BB7D0E45262D1F7E0014490B /* UIViewControllerExtension.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		BB7D0FC7262D225A0014490B /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				BB7D0FF8262D225A0014490B /* Main.storyboard */,
+				BB7D0FEC262D225A0014490B /* TuyaSmartMain.storyboard */,
+				BB7D1069262D26B20014490B /* NewAsset.storyboard */,
+				BB7D108E262D2D420014490B /* AssetList.storyboard */,
+				BB7D10C9262D369C0014490B /* SwitchAsset.storyboard */,
+				BB7D0FEE262D225A0014490B /* DeviceList.storyboard */,
+				BB7D0FFC262D225A0014490B /* Login.storyboard */,
+				BBE8386726318515007D7831 /* NetworkInformation.storyboard */,
+				BB7D0FF4262D225A0014490B /* APMode.storyboard */,
+				BB7D10D8262D54EF0014490B /* QRMode.storyboard */,
+				BB7D0FEA262D225A0014490B /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		BB7D1073262D289F0014490B /* Asset Management */ = {
+			isa = PBXGroup;
+			children = (
+				BB7D1097262D2F5F0014490B /* AssetListTableViewController.swift */,
+				BB7D109C262D2F700014490B /* SwitchAssetTableViewController.swift */,
+			);
+			path = "Asset Management";
+			sourceTree = "<group>";
+		};
+		BB7D11B4262FD5D20014490B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BB7D11B5262FD6220014490B /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BB7D0DCE262D1D340014490B /* TuyaIoTAppSDKSample-iOS-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB7D0DF9262D1D370014490B /* Build configuration list for PBXNativeTarget "TuyaIoTAppSDKSample-iOS-Swift" */;
+			buildPhases = (
+				CB14AC15D50EE60D9BD148ED /* [CP] Check Pods Manifest.lock */,
+				BB7D0DCB262D1D340014490B /* Sources */,
+				BB7D0DCC262D1D340014490B /* Frameworks */,
+				BB7D0DCD262D1D340014490B /* Resources */,
+				CA124FCC09E6562906786074 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TuyaIoTAppSDKSample-iOS-Swift";
+			productName = TuyaSaaSAppSDKSample;
+			productReference = BB7D0DCF262D1D340014490B /* TuyaIoTAppSDKSample-iOS-Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BB7D0DE4262D1D370014490B /* TuyaIoTAppSDKSample-iOS-SwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB7D0DFC262D1D370014490B /* Build configuration list for PBXNativeTarget "TuyaIoTAppSDKSample-iOS-SwiftTests" */;
+			buildPhases = (
+				BB7D0DE1262D1D370014490B /* Sources */,
+				BB7D0DE2262D1D370014490B /* Frameworks */,
+				BB7D0DE3262D1D370014490B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB7D0DE7262D1D370014490B /* PBXTargetDependency */,
+			);
+			name = "TuyaIoTAppSDKSample-iOS-SwiftTests";
+			productName = TuyaSaaSAppSDKSampleTests;
+			productReference = BB7D0DE5262D1D370014490B /* TuyaIoTAppSDKSample-iOS-SwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BB7D0DEF262D1D370014490B /* TuyaIoTAppSDKSample-iOS-SwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB7D0DFF262D1D370014490B /* Build configuration list for PBXNativeTarget "TuyaIoTAppSDKSample-iOS-SwiftUITests" */;
+			buildPhases = (
+				BB7D0DEC262D1D370014490B /* Sources */,
+				BB7D0DED262D1D370014490B /* Frameworks */,
+				BB7D0DEE262D1D370014490B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB7D0DF2262D1D370014490B /* PBXTargetDependency */,
+			);
+			name = "TuyaIoTAppSDKSample-iOS-SwiftUITests";
+			productName = TuyaSaaSAppSDKSampleUITests;
+			productReference = BB7D0DF0262D1D370014490B /* TuyaIoTAppSDKSample-iOS-SwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BB7D0DC7262D1D340014490B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					BB7D0DCE262D1D340014490B = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					BB7D0DE4262D1D370014490B = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = BB7D0DCE262D1D340014490B;
+					};
+					BB7D0DEF262D1D370014490B = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = BB7D0DCE262D1D340014490B;
+					};
+				};
+			};
+			buildConfigurationList = BB7D0DCA262D1D340014490B /* Build configuration list for PBXProject "TuyaIoTAppSDKSample-iOS-Swift" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = BB7D0DC6262D1D340014490B;
+			productRefGroup = BB7D0DD0262D1D340014490B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB7D0DCE262D1D340014490B /* TuyaIoTAppSDKSample-iOS-Swift */,
+				BB7D0DE4262D1D370014490B /* TuyaIoTAppSDKSample-iOS-SwiftTests */,
+				BB7D0DEF262D1D370014490B /* TuyaIoTAppSDKSample-iOS-SwiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB7D0DCD262D1D340014490B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB7D1020262D225A0014490B /* APMode.storyboard in Resources */,
+				BB7D0ED4262D1F8A0014490B /* Localizable.strings in Resources */,
+				BB7D0ED3262D1F8A0014490B /* InfoPlist.strings in Resources */,
+				BB7D101D262D225A0014490B /* DeviceList.storyboard in Resources */,
+				BB7D1022262D225A0014490B /* Main.storyboard in Resources */,
+				BB7D1024262D225A0014490B /* Login.storyboard in Resources */,
+				BB7D0DDC262D1D370014490B /* Assets.xcassets in Resources */,
+				BB7D10C7262D369C0014490B /* SwitchAsset.storyboard in Resources */,
+				BB7D101C262D225A0014490B /* TuyaSmartMain.storyboard in Resources */,
+				BB7D108C262D2D420014490B /* AssetList.storyboard in Resources */,
+				BB7D1067262D26B20014490B /* NewAsset.storyboard in Resources */,
+				BBE8386826318515007D7831 /* NetworkInformation.storyboard in Resources */,
+				BB7D10D6262D54EF0014490B /* QRMode.storyboard in Resources */,
+				BB7D101B262D225A0014490B /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB7D0DE3262D1D370014490B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB7D0DEE262D1D370014490B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CA124FCC09E6562906786074 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TuyaIoTAppSDKSample-iOS-Swift/Pods-TuyaIoTAppSDKSample-iOS-Swift-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TuyaIoTAppSDKSample-iOS-Swift/Pods-TuyaIoTAppSDKSample-iOS-Swift-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TuyaIoTAppSDKSample-iOS-Swift/Pods-TuyaIoTAppSDKSample-iOS-Swift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB14AC15D50EE60D9BD148ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TuyaIoTAppSDKSample-iOS-Swift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BB7D0DCB262D1D340014490B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB7D0E9A262D1F7F0014490B /* MainViewController.swift in Sources */,
+				BB7D10DF262D554C0014490B /* QRModelViewController.swift in Sources */,
+				BB7D0E9B262D1F7F0014490B /* TuyaSmartMainTableViewController.swift in Sources */,
+				BB7D0E91262D1F7F0014490B /* DeviceListTableViewController.swift in Sources */,
+				BB7D0EA7262D1F7F0014490B /* UIButtonExtension.swift in Sources */,
+				BB7D0E8E262D1F7F0014490B /* StringTableViewCell.swift in Sources */,
+				BB7D0E90262D1F7F0014490B /* SwitchTableViewCell.swift in Sources */,
+				BB7D0DD3262D1D340014490B /* AppDelegate.swift in Sources */,
+				BB7D0EA8262D1F7F0014490B /* Alert.swift in Sources */,
+				BB7D109D262D2F700014490B /* SwitchAssetTableViewController.swift in Sources */,
+				BB7D0E93262D1F7F0014490B /* APModeTableViewController.swift in Sources */,
+				BB7D0E8B262D1F7F0014490B /* LabelTableViewCell.swift in Sources */,
+				BB7D0E89262D1F7F0014490B /* DeviceDetailTableViewController.swift in Sources */,
+				BB7D0E92262D1F7F0014490B /* DeviceControlTableViewController.swift in Sources */,
+				BB7D0EAA262D1F7F0014490B /* UIViewControllerExtension.swift in Sources */,
+				BB7D0EA9262D1F7F0014490B /* NotificationName.swift in Sources */,
+				BBFCE3F02637B24100A0AF71 /* AppKey.swift in Sources */,
+				BBE83878263186DE007D7831 /* NetworkInformationTableViewController.swift in Sources */,
+				BB7D1098262D2F5F0014490B /* AssetListTableViewController.swift in Sources */,
+				BB7D0E8C262D1F7F0014490B /* SliderTableViewCell.swift in Sources */,
+				BB7D0EA5262D1F7F0014490B /* LoginTableViewController.swift in Sources */,
+				BB7D11B6262FD6220014490B /* UserModel.swift in Sources */,
+				BB7D0E8F262D1F7F0014490B /* EnumTableViewCell.swift in Sources */,
+				BB7D0E8A262D1F7F0014490B /* DeviceControlCell.swift in Sources */,
+				BB7D0E8D262D1F7F0014490B /* DeviceStatusBehaveCell.swift in Sources */,
+				BB7D0DD5262D1D340014490B /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB7D0DE1262D1D370014490B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB7D0DEC262D1D370014490B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BB7D0DE7262D1D370014490B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB7D0DCE262D1D340014490B /* TuyaIoTAppSDKSample-iOS-Swift */;
+			targetProxy = BB7D0DE6262D1D370014490B /* PBXContainerItemProxy */;
+		};
+		BB7D0DF2262D1D370014490B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB7D0DCE262D1D340014490B /* TuyaIoTAppSDKSample-iOS-Swift */;
+			targetProxy = BB7D0DF1262D1D370014490B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BB7D0ECF262D1F8A0014490B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB7D0ED0262D1F8A0014490B /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BB7D0ED1262D1F8A0014490B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB7D0ED2262D1F8A0014490B /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		BB7D0FEA262D225A0014490B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB7D0FEB262D225A0014490B /* Base */,
+				BB7D1033262D22CC0014490B /* zh-Hans */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BB7D0FEC262D225A0014490B /* TuyaSmartMain.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB7D0FED262D225A0014490B /* Base */,
+				BB7D1034262D22D00014490B /* zh-Hans */,
+			);
+			name = TuyaSmartMain.storyboard;
+			sourceTree = "<group>";
+		};
+		BB7D0FEE262D225A0014490B /* DeviceList.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB7D0FEF262D225A0014490B /* Base */,
+				BB7D1038262D22F90014490B /* zh-Hans */,
+			);
+			name = DeviceList.storyboard;
+			sourceTree = "<group>";
+		};
+		BB7D0FF4262D225A0014490B /* APMode.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB7D0FF5262D225A0014490B /* Base */,
+				BB7D103A262D23030014490B /* zh-Hans */,
+			);
+			name = APMode.storyboard;
+			sourceTree = "<group>";
+		};
+		BB7D0FF8262D225A0014490B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB7D0FF9262D225A0014490B /* Base */,
+				BB7D1031262D22AB0014490B /* zh-Hans */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BB7D0FFC262D225A0014490B /* Login.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB7D0FFD262D225A0014490B /* Base */,
+				BB7D103D262D23140014490B /* zh-Hans */,
+			);
+			name = Login.storyboard;
+			sourceTree = "<group>";
+		};
+		BB7D1069262D26B20014490B /* NewAsset.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB7D106D262D26B90014490B /* Base */,
+				BB7D106F262D26F60014490B /* zh-Hans */,
+			);
+			name = NewAsset.storyboard;
+			sourceTree = "<group>";
+		};
+		BB7D108E262D2D420014490B /* AssetList.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB7D108D262D2D420014490B /* Base */,
+				BB7D1093262D2D4C0014490B /* zh-Hans */,
+			);
+			name = AssetList.storyboard;
+			sourceTree = "<group>";
+		};
+		BB7D10C9262D369C0014490B /* SwitchAsset.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB7D10C8262D369C0014490B /* Base */,
+				BB7D10CD262D36A50014490B /* zh-Hans */,
+			);
+			name = SwitchAsset.storyboard;
+			sourceTree = "<group>";
+		};
+		BB7D10D8262D54EF0014490B /* QRMode.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB7D10D7262D54EF0014490B /* Base */,
+				BB7D10DD262D54FA0014490B /* zh-Hans */,
+			);
+			name = QRMode.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BB7D0DF7262D1D370014490B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BB7D0DF8262D1D370014490B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BB7D0DFA262D1D370014490B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A2BC0AEEC460C0B1934A360 /* Pods-TuyaIoTAppSDKSample-iOS-Swift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P8N7H4ZLA3;
+				INFOPLIST_FILE = "TuyaIoTAppSDKSample-iOS-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.TuyaIoTAppSDKSample.demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TuyaIoTAppSDKSample-iOS-Swift/TuyaIoTAppSDKSample-iOS-Swift_Bridging_Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BB7D0DFB262D1D370014490B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6FC32CA6BC803EF5F6EE94D /* Pods-TuyaIoTAppSDKSample-iOS-Swift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P8N7H4ZLA3;
+				INFOPLIST_FILE = "TuyaIoTAppSDKSample-iOS-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.TuyaIoTAppSDKSample.demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TuyaIoTAppSDKSample-iOS-Swift/TuyaIoTAppSDKSample-iOS-Swift_Bridging_Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BB7D0DFD262D1D370014490B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "TuyaIoTAppSDKSample-iOS-SwiftTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.TuyaSaaSAppSDK.Sample.TuyaSaaSAppSDKSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TuyaIoTAppSDKSample-iOS-Swift.app/TuyaIoTAppSDKSample-iOS-Swift";
+			};
+			name = Debug;
+		};
+		BB7D0DFE262D1D370014490B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "TuyaIoTAppSDKSample-iOS-SwiftTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.TuyaSaaSAppSDK.Sample.TuyaSaaSAppSDKSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TuyaIoTAppSDKSample-iOS-Swift.app/TuyaIoTAppSDKSample-iOS-Swift";
+			};
+			name = Release;
+		};
+		BB7D0E00262D1D370014490B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "TuyaIoTAppSDKSample-iOS-SwiftUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.TuyaSaaSAppSDK.Sample.TuyaSaaSAppSDKSampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TuyaSaaSAppSDKSample;
+			};
+			name = Debug;
+		};
+		BB7D0E01262D1D370014490B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "TuyaIoTAppSDKSample-iOS-SwiftUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.TuyaSaaSAppSDK.Sample.TuyaSaaSAppSDKSampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TuyaSaaSAppSDKSample;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BB7D0DCA262D1D340014490B /* Build configuration list for PBXProject "TuyaIoTAppSDKSample-iOS-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB7D0DF7262D1D370014490B /* Debug */,
+				BB7D0DF8262D1D370014490B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB7D0DF9262D1D370014490B /* Build configuration list for PBXNativeTarget "TuyaIoTAppSDKSample-iOS-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB7D0DFA262D1D370014490B /* Debug */,
+				BB7D0DFB262D1D370014490B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB7D0DFC262D1D370014490B /* Build configuration list for PBXNativeTarget "TuyaIoTAppSDKSample-iOS-SwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB7D0DFD262D1D370014490B /* Debug */,
+				BB7D0DFE262D1D370014490B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB7D0DFF262D1D370014490B /* Build configuration list for PBXNativeTarget "TuyaIoTAppSDKSample-iOS-SwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB7D0E00262D1D370014490B /* Debug */,
+				BB7D0E01262D1D370014490B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BB7D0DC7262D1D340014490B /* Project object */;
+}
