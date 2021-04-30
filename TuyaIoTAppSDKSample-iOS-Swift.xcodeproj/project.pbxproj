@@ -328,6 +328,7 @@
 				BB7D0DCC262D1D340014490B /* Frameworks */,
 				BB7D0DCD262D1D340014490B /* Resources */,
 				CA124FCC09E6562906786074 /* [CP] Copy Pods Resources */,
+				301C5A34A73E656156AD13DF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -456,6 +457,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		301C5A34A73E656156AD13DF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TuyaIoTAppSDKSample-iOS-Swift/Pods-TuyaIoTAppSDKSample-iOS-Swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TuyaIoTAppSDKSample-iOS-Swift/Pods-TuyaIoTAppSDKSample-iOS-Swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TuyaIoTAppSDKSample-iOS-Swift/Pods-TuyaIoTAppSDKSample-iOS-Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CA124FCC09E6562906786074 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -794,8 +812,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P8N7H4ZLA3;
+				DEVELOPMENT_TEAM = 94JFPTRDN5;
 				INFOPLIST_FILE = "TuyaIoTAppSDKSample-iOS-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -816,8 +835,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P8N7H4ZLA3;
+				DEVELOPMENT_TEAM = 94JFPTRDN5;
 				INFOPLIST_FILE = "TuyaIoTAppSDKSample-iOS-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

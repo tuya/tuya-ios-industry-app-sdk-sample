@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        SDK.initialize(clientID: AppKey.clientID, clientSecret: AppKey.clientSecret, hostRegion: .CN)
+        TYSDK.initialize(clientID: AppKey.clientID, clientSecret: AppKey.clientSecret, hostRegion: .CN)
         TuyaConstant.bundleID = Bundle.main.bundleIdentifier ?? ""
         
         if #available(iOS 13.0, *) {
