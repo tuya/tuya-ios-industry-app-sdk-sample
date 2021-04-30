@@ -70,12 +70,30 @@ pod install
    3. Click **Manage** under the **Operation** column of the target project.
    4. On the **Authorized User** tab, click **Add Authorization**.
    5. In the **Add Authorized User** window, add the account information to be authorized, and click **OK**.
+   
+8. API Products Subscription
 
-8. Obtain the Client ID and Client Secret of the created Andriod application on the **Applications**>**App**.
+   **1.** Go to **Projects** > **API Products** > **All Products**, click **Industry Project**, and subscribe to your desired API products.
+	![image.png](https://images.tuyacn.com/app/Hanh/APIproducts.png)
+	
+	**You need to subscribe to these API Products for [Tuya Home Assistant](https://github.com/tuya/tuya-home-assistant) and [Tuya Home Bridge](https://github.com/tuya/tuya-homebridge) integrations**
+	
+	![image.png](https://images.tuyacn.com/app/hass/open_api_products.jpg)
+	
+	**2.** Go to **Projects** > **API Products** > **Subscribed Products**. Click one of the API products to subscribe.
+	
+	![image.png](https://images.tuyacn.com/app/Hanh/buyapi.png)
+	
+	**3.** Click **Project** > **New Authorization** to authorize your project to use this API.
+	![image.png](https://images.tuyacn.com/app/Hanh/tip.png)
+	![image.png](https://images.tuyacn.com/app/Hanh/newauthorization.png)
+	![image.png](https://images.tuyacn.com/app/Hanh/apiproductauthorization.png)
+
+9. Obtain the Client ID and Client Secret of the created Andriod application on the **Applications**>**App**.
    <img src="https://images.tuyacn.com/app/iotappsample/en/client_secret_new.png" style="zoom:50%;" />
-9. Open the `TuyaIoTAppSDKSample-iOS-Swift.xcworkspace` pod generated for you.
+10. Open the `TuyaIoTAppSDKSample-iOS-Swift.xcworkspace` pod generated for you.
 
-10. Fill in the AppKey and AppSecret in the **AppKey.swift** file.
+11. Fill in the AppKey and AppSecret in the **AppKey.swift** file.
 
 ```swift
 struct AppKey {
