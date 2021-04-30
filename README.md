@@ -13,8 +13,6 @@ IoT App SDK Sample has the following functions:
 
 ## Quick Start
 
-### Step 1: Download the project
-
 1. The Tuya IoT App SDK is distributed through [CocoaPods](http://cocoapods.org/) and other dependencies in this sample. Make sure that you have installed CocoaPods. If not, run the following command to install CocoaPods first:
 
 ```bash
