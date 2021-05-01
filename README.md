@@ -104,6 +104,27 @@ struct AppKey {
 
 **Note**: The bundle ID, AppKey, and AppSecret must be the same as your app on the [Tuya IoT Platform](https://iot.tuya.com). Otherwise, the sample cannot request the API.
 
+## Sample App Features Overview
+
+### Account Login
+
+<img src="https://images.tuyacn.com/app/IoTAppSDK/ios_iot_sdk_login.png" width="30%" /> 
+<img src="https://images.tuyacn.com/app/IoTAppSDK/ios_iot_sdk_home.png" width="30%" /> 
+
+### Swich Asset
+
+<img src="https://images.tuyacn.com/app/IoTAppSDK/ios_iot_sdk_switchAsset.png" width="30%" /> 
+
+### Device Network Pairing
+
+<img src="https://images.tuyacn.com/app/IoTAppSDK/ios_iot_sdk_ap.png" width="30%" /> 
+<img src="https://images.tuyacn.com/app/IoTAppSDK/ios_iot_sdk_qrMode.png" width="30%" /> 
+
+### Device List and Details
+
+<img src="https://images.tuyacn.com/app/IoTAppSDK/ios_iot_sdk_deviceList.png" width="30%" /> 
+<img src="https://images.tuyacn.com/app/IoTAppSDK/ios_iot_sdk_deviceDetail2.png" width="30%" /> 
+
 ## Issue Feedback
 
 You can provide feedback on your issue via **GitHub Issue** or [Ticket](https://service.console.tuya.com).
