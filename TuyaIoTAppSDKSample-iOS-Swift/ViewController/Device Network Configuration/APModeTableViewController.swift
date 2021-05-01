@@ -14,6 +14,7 @@ class APModeTableViewController: UITableViewController {
     
     var ssid: String = ""
     var password: String = ""
+    var pairingToken: String = ""
     var token: String = ""
     private var isSuccess = false
     private var timer: DispatchSourceTimer! = nil
@@ -45,7 +46,8 @@ class APModeTableViewController: UITableViewController {
         TYDeviceRegistrationManager().generateToken(for: .AP, uid: TYUserInfo.uid!, assetID: assetID) { [weak self] (deviceRegistrationToken, error) in
             guard let self = self else { return }
             if deviceRegistrationToken != nil {
-                self.token = deviceRegistrationToken!.pairingToken
+                self.pairingToken = deviceRegistrationToken!.pairingToken
+                self.token = deviceRegistrationToken!.token
                 SVProgressHUD.showInfo(withStatus: "ssid:\(self.ssid), pwd:\(self.password)")
             } else {
                 SVProgressHUD.showError(withStatus: error?.localizedDescription)
@@ -56,7 +58,7 @@ class APModeTableViewController: UITableViewController {
     
     private func startConfiguration() {
         SVProgressHUD.show(withStatus: NSLocalizedString("Configuring", comment: ""))
-        TYAPActivator(SSID: ssid, password: password, pairingToken: token).start()
+        TYAPActivator(SSID: ssid, password: password, pairingToken: pairingToken).start()
         DispatchQueue.global().asyncAfter(deadline: .now() + 5) {
             self.requestConfigResult()
         }
