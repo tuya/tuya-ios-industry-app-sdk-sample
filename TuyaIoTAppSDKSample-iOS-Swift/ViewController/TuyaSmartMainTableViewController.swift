@@ -54,6 +54,7 @@ class TuyaSmartMainTableViewController: UITableViewController {
         let logoutAction = UIAlertAction(title: "Confirm logout.", style: .destructive) { (action) in
             UserDefaults.standard.set(false, forKey: "isLogin")
             UserDefaults.standard.setValue("", forKey: "username")
+            UserDefaults.standard.removeObject(forKey: "UserLocation")
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateInitialViewController()
             self.window?.rootViewController = vc

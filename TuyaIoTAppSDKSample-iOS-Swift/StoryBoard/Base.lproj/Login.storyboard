@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PEB-QI-ZXI">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,7 +10,7 @@
         <!--Login-->
         <scene sceneID="z9Y-H6-ILG">
             <objects>
-                <tableViewController title="Login" id="PEB-QI-ZXI" customClass="LoginTableViewController" customModule="TuyaSaaSAppSDKSample" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Login" id="PEB-QI-ZXI" customClass="LoginTableViewController" customModule="TuyaIoTAppSDKSample_iOS_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="VM7-C8-Vs3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -64,12 +65,36 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" id="Sal-PZ-5Sz">
+                                        <rect key="frame" x="20" y="105" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sal-PZ-5Sz" id="LmA-8r-MDE">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Hq-kX-fi9">
+                                                    <rect key="frame" x="20" y="7" width="200" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="A14-Nj-Cs5"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="kZx-xf-OeP"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="0Hq-kX-fi9" firstAttribute="centerY" secondItem="LmA-8r-MDE" secondAttribute="centerY" id="dRn-jZ-MXt"/>
+                                                <constraint firstItem="0Hq-kX-fi9" firstAttribute="leading" secondItem="LmA-8r-MDE" secondAttribute="leading" constant="20" id="e56-c6-vu9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection id="Njt-Se-Axy">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vmu-5L-N6v">
-                                        <rect key="frame" x="20" y="141" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="184.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vmu-5L-N6v" id="1Qn-Me-rrX">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
@@ -107,6 +132,7 @@
                     <navigationItem key="navigationItem" title="Login" id="kEH-w9-yzz"/>
                     <connections>
                         <outlet property="accountTextField" destination="0Qz-La-oYh" id="WvL-Ud-gdF"/>
+                        <outlet property="locationLabel" destination="0Hq-kX-fi9" id="pHq-41-MMP"/>
                         <outlet property="loginButton" destination="yoX-Qn-PEK" id="EJ5-Cv-kjQ"/>
                         <outlet property="passwordTextField" destination="eYm-X4-pFJ" id="3NP-k3-3JG"/>
                     </connections>
