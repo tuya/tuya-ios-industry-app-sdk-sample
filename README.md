@@ -43,7 +43,7 @@ pod install
    1. In the **Projects**>**My Project** area, click the target project.
    2. In the top navigation bar, click **Applications**>**App**.
       ![image.png](https://images.tuyacn.com/app/iotappsample/en/cr_app_new.png)
-   3. In the **Add Application** window, configure the application information. Select the iOS application type.
+   3. In the **Add Application** window, configure the application information. Select the iOS application type. Please make sure the bundle identifier is the same as your created Xcode project.
       ![image.png](https://images.tuyacn.com/fe-static/docs/img/a17b897e-4db2-4b1a-8097-d49f6eb74f34.png)
 
 5. Create users.
@@ -89,8 +89,8 @@ pod install
 	![image.png](https://images.tuyacn.com/app/Hanh/newauthorization.png)
 	![image.png](https://images.tuyacn.com/app/Hanh/apiproductauthorization.png)
 
-9. Obtain the Client ID and Client Secret of the created Andriod application on the **Applications**>**App**.
-   <img src="https://images.tuyacn.com/app/iotappsample/en/client_secret_new.png" style="zoom:50%;" />
+9. Obtain the Client ID and Client Secret of the created iOS application on the **Applications**>**App**.
+   <img src="https://images.tuyacn.com/app/hass/ios_keys_intro.png" style="zoom:50%;" />
 10. Open the `TuyaIoTAppSDKSample-iOS-Swift.xcworkspace` pod generated for you.
 
 11. Fill in the AppKey and AppSecret in the **AppKey.swift** file.
