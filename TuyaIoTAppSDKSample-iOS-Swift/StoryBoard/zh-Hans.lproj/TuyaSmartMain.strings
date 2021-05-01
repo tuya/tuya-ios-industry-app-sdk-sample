@@ -4,11 +4,11 @@
 /* Class = "UILabel"; text = "Detail"; ObjectID = "Aq0-Hw-9TL"; */
 "Aq0-Hw-9TL.text" = "详情";
 
-/* Class = "UITableViewSection"; headerTitle = "Home Management"; ObjectID = "fDa-sc-eBQ"; */
-"fDa-sc-eBQ.headerTitle" = "家庭管理";
+/* Class = "UITableViewSection"; headerTitle = "Asset Management"; ObjectID = "fDa-sc-eBQ"; */
+"fDa-sc-eBQ.headerTitle" = "资产管理";
 
-/* Class = "UILabel"; text = "Home List"; ObjectID = "hVu-vd-yrL"; */
-"hVu-vd-yrL.text" = "家庭列表";
+/* Class = "UILabel"; text = "Asset List"; ObjectID = "hVu-vd-yrL"; */
+"hVu-vd-yrL.text" = "资产列表";
 
 /* Class = "UIButton"; normalTitle = "Logout"; ObjectID = "hWi-1l-FSC"; */
 "hWi-1l-FSC.normalTitle" = "退出登录";
@@ -28,8 +28,8 @@
 /* Class = "UINavigationItem"; title = "TuyaSmart"; ObjectID = "sFB-be-PT7"; */
 "sFB-be-PT7.title" = "涂鸦智能";
 
-/* Class = "UILabel"; text = "New Home"; ObjectID = "UPg-L3-96Q"; */
-"UPg-L3-96Q.text" = "创建家庭";
+/* Class = "UILabel"; text = "New Asset"; ObjectID = "UPg-L3-96Q"; */
+"UPg-L3-96Q.text" = "创建资产";
 
 /* Class = "UILabel"; text = "EZ Mode"; ObjectID = "xKZ-bx-CAn"; */
 "xKZ-bx-CAn.text" = "EZ 模式";
@@ -37,8 +37,8 @@
 /* Class = "UITableViewSection"; headerTitle = "Device Management"; ObjectID = "y2h-dz-wG3"; */
 "y2h-dz-wG3.headerTitle" = "设备管理";
 
-/* Class = "UILabel"; text = "Current Home"; ObjectID = "Ylu-0o-u1B"; */
-"Ylu-0o-u1B.text" = "当前家庭";
+/* Class = "UILabel"; text = "Current Asset"; ObjectID = "Ylu-0o-u1B"; */
+"Ylu-0o-u1B.text" = "当前资产";
 
 /* Class = "UILabel"; text = "Zigbee Gateway"; ObjectID = "ADg-Jx-wrW"; */
 "ADg-Jx-wrW.text" = "Zigbee 网关";

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sT3-zU-yMU">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,7 +10,7 @@
         <!--Switch Asset-->
         <scene sceneID="8uf-3c-v2T">
             <objects>
-                <tableViewController id="sT3-zU-yMU" userLabel="Switch Asset" customClass="SwitchAssetTableViewController" customModule="TuyaSaaSAppSDKSample" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="sT3-zU-yMU" userLabel="Switch Asset" customClass="SwitchAssetTableViewController" customModule="TuyaIoTAppSDKSample_iOS_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="unv-w6-QJd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,7 +46,7 @@
                             <outlet property="delegate" destination="sT3-zU-yMU" id="Sc9-gi-yfO"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Switch Home" id="sbd-Ib-PeL" userLabel="Switch Asset"/>
+                    <navigationItem key="navigationItem" title="Switch Asset" id="sbd-Ib-PeL" userLabel="Switch Asset"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vl9-68-hKk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

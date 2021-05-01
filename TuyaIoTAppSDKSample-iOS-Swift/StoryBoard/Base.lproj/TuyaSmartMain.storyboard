@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hxo-wv-xgW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -65,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="1384" y="14"/>
         </scene>
-        <!--TuyaSmart-->
+        <!--IoT App Sample-->
         <scene sceneID="InR-5B-G5v">
             <objects>
-                <tableViewController id="t4H-M1-fvU" customClass="TuyaSmartMainTableViewController" customModule="TuyaSaaSAppSDKSample" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="t4H-M1-fvU" customClass="TuyaSmartMainTableViewController" customModule="TuyaIoTAppSDKSample_iOS_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="BHV-dz-DWv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,8 +83,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZNY-DM-4Bg" userLabel="UserName">
-                                                    <rect key="frame" x="20" y="12" width="85.5" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZNY-DM-4Bg" userLabel="UserName">
+                                                    <rect key="frame" x="20" y="12" width="78.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -122,7 +123,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Home Management" id="RSC-1U-noW">
+                            <tableViewSection headerTitle="Asset Management" id="RSC-1U-noW">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="XGT-qd-2hI" detailTextLabel="X1s-Qi-N0a" style="IBUITableViewCellStyleValue1" id="Qxr-j5-2rB">
                                         <rect key="frame" x="20" y="198.5" width="374" height="43.5"/>
@@ -247,7 +248,7 @@
                             <outlet property="delegate" destination="t4H-M1-fvU" id="EMa-tL-ubJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="TuyaSmart" id="wXA-cH-mvy"/>
+                    <navigationItem key="navigationItem" title="IoT App Sample" id="wXA-cH-mvy"/>
                     <connections>
                         <outlet property="currentHomeLabel" destination="X1s-Qi-N0a" id="pEh-VR-TdV"/>
                         <outlet property="logoutButton" destination="B48-TI-DUx" id="OrF-eU-gvc"/>
