@@ -11,6 +11,10 @@ IoT App SDK Sample has the following functions:
 - Equipment distribution module (AP, QRcode mode)
 - Equipment module (equipment query, equipment unbinding)
 
+## API Reference Docs
+
+iOS IoT App SDK API Reference: https://tuya.github.io/tuya-ios-iot-app-sdk-sample/
+
 ## Quick Start
 
 1. The Tuya IoT App SDK is distributed through [CocoaPods](http://cocoapods.org/) and other dependencies in this sample. Make sure that you have installed CocoaPods. If not, run the following command to install CocoaPods first:
