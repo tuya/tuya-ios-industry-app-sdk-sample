@@ -1,0 +1,69 @@
+/* 
+  Localizable.strings
+  DeviceManager
+
+  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
+  
+*/
+
+"Logout" = "Logout";
+"LogIn" = "Log in";
+"LogoutMessage" = "Do you want to logout？";
+"Username" = "Username";
+"Scan" = "Scan";
+"ScanMessage" = "Press to scan the QR code in iot.tuya.com to configure the Authorization Keys.";
+"SwitchApp" = "Switch App";
+"SwitchAppAlert" = "Are you sure to switch the app?";
+"AccountPasswordEmpty" = "Account and password cannot be empty";
+"ClientEmptyAlert" = "Please switch app";
+"ChooseCountry" = "Choose your country";
+
+"DeviceManager" = "Device Manager";
+"DevicePairing" = "Device Pairing";
+"AssetManagement" = "Asset Management";
+"DeviceManagement" = "Device Management";
+"Assets" = "Assets";
+"SelectCurrentAsset" = "Select Current Asset";
+"DeviceList" = "Device list";
+"DeviceManagerAP" = "AP Mode";
+"DeviceManagerQR" = "QR Mode";
+"DeviceNone" = "No device.";
+
+"SetWiFi" = "Set Wi-Fi";
+"SetWiFiMessage" = "Select 2.4GHz Wi-Fi Network and enter password.";
+"SetWiFiMessageDetail" = "If your Wi-Fi is 5GHz, please set it to be 2.4GHz.";
+"Account" = "Account";
+"Password" = "Password";
+"Next" = "Next";
+"PairingTokenEmpty" = "The pairing Token is empty";
+"TokenEmpty" = "The Token is empty";
+
+"ConnectHotSpot" = "Connect HotSpot WiFi";
+"ConnectHotSpotMessage1" = "1. Connect your mobile phone to the device's hotspot shown below.";
+"ConnectHotSpotMessage2" = "2. Go back to the app and continue to add devices.";
+
+"QRCofiged" = "QR configure";
+"QRCofigedMessage" = "Please scan the QR code from 15 to 20 cm away.";
+"QRCofigedPrompt" = "I heard a Prompt";
+
+"State" = "State";
+"StateAddDevice" = "Adding device…";
+"StateMessage" = "Ensure that the device is powered on.";
+"StateScanDevices" = "Scan devices.";
+"StateRegister" = "Register on Cloud.";
+"StateInitialize" = "Initialize the device.";
+"Timeout" = "Timeout";
+
+"ActivatorResult" = "Pairing Result";
+"ActivatorResultMessage" = "You have successfully added the device.";
+"AssetIDFormat" = "Asset ID: %@";
+"DeviceIDFormat" = "Device ID: %@";
+"OK" = "OK";
+"YES" = "YES";
+"Cancel" = "Cancel";
+"Prompt" = "Prompt";
+"NoPermission" = "No permission";
+"Success" = "Success";
+"Fail" = "Fail";
+
+
