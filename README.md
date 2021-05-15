@@ -113,7 +113,7 @@ Tuya iOS Device Manager App is developed using iOS IoT App SDK. This App provide
   
 ### Home Page
 
-<img src="https://images.tuyacn.com/app/IoTAppSDK/scan_code_ios.png" width="35%" /> 
+<img src="https://images.tuyacn.com/app/IoTAppSDK/homepage_ios.png" width="35%" /> 
 
 ### Asset Managerment
 
