@@ -35,7 +35,7 @@ class QRModelViewController: UIViewController {
             guard let self = self else { return }
             if deviceRegistrationToken != nil {
                 self.token = deviceRegistrationToken!.token
-                let qrImage = try! TYQRCodeActivator(SSID: self.ssid, password: self.password, pairingToken: deviceRegistrationToken!.pairingToken).generateQRCodeUIImage()
+                let qrImage = try! TYQRCodeActivator(SSID: self.ssid, password: self.password, pairingToken: deviceRegistrationToken!.pairingToken).generateQRCodeUIImage(width: 200)
                 self.qrImageView.image = qrImage
                 SVProgressHUD.dismiss()
             } else {
