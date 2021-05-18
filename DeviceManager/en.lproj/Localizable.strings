@@ -7,51 +7,51 @@
 */
 
 "Logout" = "Logout";
-"LogIn" = "Log in";
-"LogoutMessage" = "Do you want to logout？";
+"LogIn" = "Login";
+"LogoutMessage" = "Are you sure to log out?";
 "Username" = "Username";
 "Scan" = "Scan";
-"ScanMessage" = "Press to scan the QR code in iot.tuya.com to configure the Authorization Keys.";
+"ScanMessage" = "Scan the QR code for the authorization key at iot.tuya.com.";
 "SwitchApp" = "Switch App";
 "SwitchAppAlert" = "Are you sure to switch the app?";
-"AccountPasswordEmpty" = "Account and password cannot be empty";
-"ClientEmptyAlert" = "Please switch app";
-"ChooseCountry" = "Choose your country";
+"AccountPasswordEmpty" = "Specify the username and password.";
+"ClientEmptyAlert" = "Switch to the correct app.";
+"ChooseCountry" = "Select your country.";
 
 "DeviceManager" = "Device Manager";
-"DevicePairing" = "Device Pairing";
-"AssetManagement" = "Asset Management";
-"DeviceManagement" = "Device Management";
+"DevicePairing" = "Pair Devices";
+"AssetManagement" = "Manage Assets";
+"DeviceManagement" = "Manage Devices";
 "Assets" = "Assets";
 "SelectCurrentAsset" = "Select Current Asset";
-"DeviceList" = "Device list";
+"DeviceList" = "Devices";
 "DeviceManagerAP" = "AP Mode";
-"DeviceManagerQR" = "QR Mode";
-"DeviceNone" = "No device.";
+"DeviceManagerQR" = "QR Code";
+"DeviceNone" = "No devices found";
 
 "SetWiFi" = "Set Wi-Fi";
-"SetWiFiMessage" = "Select 2.4GHz Wi-Fi Network and enter password.";
-"SetWiFiMessageDetail" = "If your Wi-Fi is 5GHz, please set it to be 2.4GHz.";
+"SetWiFiMessage" = "Select 2.4 GHz Wi-Fi Network and enter the password.";
+"SetWiFiMessageDetail" = "If your Wi-Fi network is 5 GHz, switch to 2.4 GHz.";
 "Account" = "Account";
 "Password" = "Password";
 "Next" = "Next";
-"PairingTokenEmpty" = "The pairing Token is empty";
-"TokenEmpty" = "The Token is empty";
+"PairingTokenEmpty" = "Specify the pairing token.";
+"TokenEmpty" = "Specify the token.";
 
-"ConnectHotSpot" = "Connect HotSpot WiFi";
-"ConnectHotSpotMessage1" = "1. Connect your mobile phone to the device's hotspot shown below.";
-"ConnectHotSpotMessage2" = "2. Go back to the app and continue to add devices.";
+"ConnectHotSpot" = "Connect Hotspot Wi-Fi";
+"ConnectHotSpotMessage1" = "1. Connect your mobile phone to the following hotspot of the device.";
+"ConnectHotSpotMessage2" = "2. Go back to the app and continue to add the device.";
 
-"QRCofiged" = "QR configure";
-"QRCofigedMessage" = "Please scan the QR code from 15 to 20 cm away.";
-"QRCofigedPrompt" = "I heard a Prompt";
+"QRCofiged" = "Pair with QR Code";
+"QRCofigedMessage" = "Scan the QR code at a distance of 15 to 20 cm.";
+"QRCofigedPrompt" = "I heard a beep.";
 
 "State" = "State";
-"StateAddDevice" = "Adding device…";
-"StateMessage" = "Ensure that the device is powered on.";
-"StateScanDevices" = "Scan devices.";
-"StateRegister" = "Register on Cloud.";
-"StateInitialize" = "Initialize the device.";
+"StateAddDevice" = "Adding Device...";
+"StateMessage" = "The device must be powered on.";
+"StateScanDevices" = "Scan Device";
+"StateRegister" = "Register in Cloud";
+"StateInitialize" = "Initialize Device";
 "Timeout" = "Timeout";
 
 "ActivatorResult" = "Pairing Result";
@@ -59,11 +59,11 @@
 "AssetIDFormat" = "Asset ID: %@";
 "DeviceIDFormat" = "Device ID: %@";
 "OK" = "OK";
-"YES" = "YES";
+"YES" = "Yes";
 "Cancel" = "Cancel";
 "Prompt" = "Prompt";
-"NoPermission" = "No permission";
+"NoPermission" = "Unauthorized";
 "Success" = "Success";
-"Fail" = "Fail";
+"Fail" = "Failure";
 
 
