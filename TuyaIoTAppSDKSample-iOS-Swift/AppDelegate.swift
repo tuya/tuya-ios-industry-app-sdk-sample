@@ -17,7 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let location = UserModel.location()
         TYSDK.initialize(clientID: AppKey.clientID, clientSecret: AppKey.clientSecret, hostRegion: location)
-        TYConstant.bundleID = Bundle.main.bundleIdentifier ?? ""
+        #if DEBUG
+        TYSDK.isDebugMode = true
+        #endif
         
         if #available(iOS 13.0, *) {
             // Will go into scene delegate

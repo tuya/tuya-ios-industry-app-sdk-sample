@@ -3,7 +3,7 @@ source 'https://github.com/TuyaInc/TuyaPublicSpecs.git'
 
 target 'TuyaIoTAppSDKSample-iOS-Swift' do
   pod 'SVProgressHUD'
-  pod 'TuyaIoTAppSDK'
+  pod 'TuyaIoTAppSDK', '1.0.0'
 end
 
 post_install do |installer|
