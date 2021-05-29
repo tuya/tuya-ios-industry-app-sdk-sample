@@ -1,5 +1,24 @@
 # Tuya iOS IoT App SDK Release Notes
 
+## v1.0.0
+
+### Release date
+
+2021.05.29
+
+### New updates
+
+- Added New Device Pairing.
+   - Wired Mode
+   - EZ Mode
+   - NB Scan QR Code Mode
+   - Zigbee gateway subdevice
+- Bug fixes.
+
+<div>
+        &copy; 2014 - 2021 Tuya Inc. All Rights Reserved.
+</div>
+
 ## V0.9.0
 
 ### Release date
