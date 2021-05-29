@@ -21,9 +21,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          Tuya iOS IoT App SDK 0.9.0 Docs
+          Tuya iOS IoT App SDK 1.0.0 Docs
         </a>
-         (64% documented)
+         (65% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -36,7 +36,7 @@
     </header>
 
     <p class="breadcrumbs">
-      <a class="breadcrumb" href="../index.html">Tuya iOS IoT App SDK Reference</a>
+      <a class="breadcrumb" href="../index.html">TuyaIoTAppSDK Reference</a>
       <img class="carat" src="../img/carat.png" />
       TYAssetManager Class Reference
     </p>
@@ -64,6 +64,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/TYCategoryStandardCommand.html">TYCategoryStandardCommand</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/TYConstant.html">TYConstant</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/TYDataRequest.html">TYDataRequest</a>
@@ -108,13 +111,22 @@
                 <a class="nav-group-task-link" href="../Classes/TYDevicesRequestResult.html">TYDevicesRequestResult</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/TYError.html">TYError</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/TYFailedPairingDevice.html">TYFailedPairingDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/TYGateway.html">TYGateway</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/TYNetwork.html">TYNetwork</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/TYPairedDevice.html">TYPairedDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/TYPairedNBDevice.html">TYPairedNBDevice</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/TYPairedSubDevice.html">TYPairedSubDevice</a>
@@ -144,10 +156,7 @@
                 <a class="nav-group-task-link" href="../Classes/TYVagueDevice.html">TYVagueDevice</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/TuyaConstant.html">TuyaConstant</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/TuyaError.html">TuyaError</a>
+                <a class="nav-group-task-link" href="../Classes/TYWiredActivator.html">TYWiredActivator</a>
               </li>
             </ul>
           </li>
@@ -210,7 +219,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Request all actionable assets of the current user.</p>
+                        <p>Returns all available assets of the current user.</p>
 
                       </div>
                       <div class="declaration">
@@ -233,7 +242,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Provide a parent assetID, otherwise the top level. Default is the top level.</p>
+                                  <p>The parent asset ID. If you do not set the value, the top level is queried.</p>
                                 </div>
                               </td>
                             </tr>
@@ -245,7 +254,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The page number of the pagination request. Default is 0.</p>
+                                  <p>The number of the page to be returned. Default value: 0.</p>
                                 </div>
                               </td>
                             </tr>
@@ -257,7 +266,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The result count of each request. Default is 20.</p>
+                                  <p>The number of entries to be returned per page. Default value: 20.</p>
                                 </div>
                               </td>
                             </tr>
@@ -269,7 +278,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>A callback returns a the result of assets if succeed, otherwise an error.</p>
+                                  <p>Called when the task is finished and a list of assets is returned. Otherwise, an error message is returned.</p>
                                 </div>
                               </td>
                             </tr>
@@ -292,7 +301,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get a list of devices which bind to a specific asset.</p>
+                        <p>Returns a list of devices that are bound to a specific asset.</p>
 
                       </div>
                       <div class="declaration">
@@ -315,7 +324,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The asset ID for getting its devices.</p>
+                                  <p>The ID of the asset for which the devices are returned.</p>
                                 </div>
                               </td>
                             </tr>
@@ -327,7 +336,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>To enable pagination, pass in the number of pieces of data contain in one request. Default is 20.</p>
+                                  <p>The number of entries to be returned per page. Default value: 20.</p>
                                 </div>
                               </td>
                             </tr>
@@ -339,7 +348,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The last device id of the previous request. Default is nil.</p>
+                                  <p>The last device ID that is returned for the previous request. Default value: nil.</p>
                                 </div>
                               </td>
                             </tr>
@@ -351,7 +360,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>A callback returns a list of TYVagueDevice if succeed, otherwise an error.</p>
+                                  <p>Called when the task is finished and a list of TYVagueDevice values is returned. Otherwise, an error message is returned.</p>
                                 </div>
                               </td>
                             </tr>
@@ -369,7 +378,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2021 <a class="link" href="https://developer.tuya.com" target="_blank" rel="external">Tuya</a>. All rights reserved. (Last updated: 2021-04-30)</p>
+      <p>&copy; 2021 <a class="link" href="https://developer.tuya.com" target="_blank" rel="external">Tuya</a>. All rights reserved. (Last updated: 2021-05-29)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

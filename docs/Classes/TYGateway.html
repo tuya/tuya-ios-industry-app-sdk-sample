@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>TuyaConstant Class Reference</title>
+    <title>TYGateway Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,16 +14,16 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Class/TuyaConstant" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Class/TYGateway" class="dashAnchor"></a>
 
-    <a title="TuyaConstant Class Reference"></a>
+    <a title="TYGateway Class Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          Tuya iOS IoT App SDK 0.9.0 Docs
+          Tuya iOS IoT App SDK 1.0.0 Docs
         </a>
-         (64% documented)
+         (65% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -36,9 +36,9 @@
     </header>
 
     <p class="breadcrumbs">
-      <a class="breadcrumb" href="../index.html">Tuya iOS IoT App SDK Reference</a>
+      <a class="breadcrumb" href="../index.html">TuyaIoTAppSDK Reference</a>
       <img class="carat" src="../img/carat.png" />
-      TuyaConstant Class Reference
+      TYGateway Class Reference
     </p>
 
     <div class="content-wrapper">
@@ -64,6 +64,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/TYCategoryStandardCommand.html">TYCategoryStandardCommand</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/TYConstant.html">TYConstant</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/TYDataRequest.html">TYDataRequest</a>
@@ -108,13 +111,22 @@
                 <a class="nav-group-task-link" href="../Classes/TYDevicesRequestResult.html">TYDevicesRequestResult</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/TYError.html">TYError</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/TYFailedPairingDevice.html">TYFailedPairingDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/TYGateway.html">TYGateway</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/TYNetwork.html">TYNetwork</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/TYPairedDevice.html">TYPairedDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/TYPairedNBDevice.html">TYPairedNBDevice</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/TYPairedSubDevice.html">TYPairedSubDevice</a>
@@ -144,10 +156,7 @@
                 <a class="nav-group-task-link" href="../Classes/TYVagueDevice.html">TYVagueDevice</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/TuyaConstant.html">TuyaConstant</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/TuyaError.html">TuyaError</a>
+                <a class="nav-group-task-link" href="../Classes/TYWiredActivator.html">TYWiredActivator</a>
               </li>
             </ul>
           </li>
@@ -179,12 +188,12 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>TuyaConstant</h1>
+            <h1>TYGateway</h1>
               <div class="declaration">
                 <div class="language">
                   
                   <pre class="highlight swift"><code><span class="kd">@objcMembers</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="kt">TuyaConstant</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">TYGateway</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">Decodable</span></code></pre>
 
                 </div>
               </div>
@@ -200,9 +209,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@TuyaIoTAppSDK@objc(cs)TuyaConstant(cpy)hostRegion"></a>
-                    <a name="//apple_ref/swift/Variable/hostRegion" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@TuyaIoTAppSDK@objc(cs)TuyaConstant(cpy)hostRegion">hostRegion</a>
+                    <a name="/c:@M@TuyaIoTAppSDK@objc(cs)TYGateway(py)id"></a>
+                    <a name="//apple_ref/swift/Property/id" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@TuyaIoTAppSDK@objc(cs)TYGateway(py)id">id</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -210,14 +219,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The region for Tuya Open API request. The default region is US.</p>
+                        <p>The ID of the device.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">hostRegion</span><span class="p">:</span> <span class="kt"><a href="../Enums/TYHostRegion.html">TYHostRegion</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -227,9 +236,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@TuyaIoTAppSDK@objc(cs)TuyaConstant(cpy)clientID"></a>
-                    <a name="//apple_ref/swift/Variable/clientID" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@TuyaIoTAppSDK@objc(cs)TuyaConstant(cpy)clientID">clientID</a>
+                    <a name="/c:@M@TuyaIoTAppSDK@objc(cs)TYGateway(py)name"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@TuyaIoTAppSDK@objc(cs)TYGateway(py)name">name</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -237,14 +246,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The Access ID/Client ID of your application, which can be obtained from <a href="https://iot.tuya.com/cloud/">Tuya IoT Platform</a>.</p>
+                        <p>The name of the device.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">clientID</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -254,9 +263,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@TuyaIoTAppSDK@objc(cs)TuyaConstant(cpy)clientSecret"></a>
-                    <a name="//apple_ref/swift/Variable/clientSecret" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@TuyaIoTAppSDK@objc(cs)TuyaConstant(cpy)clientSecret">clientSecret</a>
+                    <a name="/c:@M@TuyaIoTAppSDK@objc(cs)TYGateway(py)category"></a>
+                    <a name="//apple_ref/swift/Property/category" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@TuyaIoTAppSDK@objc(cs)TYGateway(py)category">category</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -264,14 +273,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The Access Secret/Client Secret of your application, which can be obtained from <a href="https://iot.tuya.com/cloud/">Tuya IoT Platform</a>.</p>
+                        <p>The category of the device, e.g. <code>dj</code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">clientSecret</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">category</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -281,9 +290,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@TuyaIoTAppSDK@objc(cs)TuyaConstant(cpy)bundleID"></a>
-                    <a name="//apple_ref/swift/Variable/bundleID" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@TuyaIoTAppSDK@objc(cs)TuyaConstant(cpy)bundleID">bundleID</a>
+                    <a name="/c:@M@TuyaIoTAppSDK@objc(cs)TYGateway(py)isOnline"></a>
+                    <a name="//apple_ref/swift/Property/isOnline" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@TuyaIoTAppSDK@objc(cs)TYGateway(py)isOnline">isOnline</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -291,14 +300,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The bundle identifier of the application your registered on Tuya IoT Platform. Default value is the bundleIdentifier of your project.</p>
+                        <p>A boolean value indicates whether the device is online.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">bundleID</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isOnline</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -313,7 +322,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2021 <a class="link" href="https://developer.tuya.com" target="_blank" rel="external">Tuya</a>. All rights reserved. (Last updated: 2021-04-30)</p>
+      <p>&copy; 2021 <a class="link" href="https://developer.tuya.com" target="_blank" rel="external">Tuya</a>. All rights reserved. (Last updated: 2021-05-29)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

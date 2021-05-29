@@ -21,9 +21,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          Tuya iOS IoT App SDK 0.9.0 Docs
+          Tuya iOS IoT App SDK 1.0.0 Docs
         </a>
-         (64% documented)
+         (65% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -36,7 +36,7 @@
     </header>
 
     <p class="breadcrumbs">
-      <a class="breadcrumb" href="../index.html">Tuya iOS IoT App SDK Reference</a>
+      <a class="breadcrumb" href="../index.html">TuyaIoTAppSDK Reference</a>
       <img class="carat" src="../img/carat.png" />
       TYAPActivator Class Reference
     </p>
@@ -64,6 +64,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/TYCategoryStandardCommand.html">TYCategoryStandardCommand</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/TYConstant.html">TYConstant</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/TYDataRequest.html">TYDataRequest</a>
@@ -108,13 +111,22 @@
                 <a class="nav-group-task-link" href="../Classes/TYDevicesRequestResult.html">TYDevicesRequestResult</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/TYError.html">TYError</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/TYFailedPairingDevice.html">TYFailedPairingDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/TYGateway.html">TYGateway</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/TYNetwork.html">TYNetwork</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/TYPairedDevice.html">TYPairedDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/TYPairedNBDevice.html">TYPairedNBDevice</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/TYPairedSubDevice.html">TYPairedSubDevice</a>
@@ -144,10 +156,7 @@
                 <a class="nav-group-task-link" href="../Classes/TYVagueDevice.html">TYVagueDevice</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/TuyaConstant.html">TuyaConstant</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/TuyaError.html">TuyaError</a>
+                <a class="nav-group-task-link" href="../Classes/TYWiredActivator.html">TYWiredActivator</a>
               </li>
             </ul>
           </li>
@@ -291,7 +300,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Create a device activator for AP mode.</p>
+                        <p>Creates a device activator in access point (AP) mode.</p>
 
                       </div>
                       <div class="declaration">
@@ -314,7 +323,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The Wi-Fi SSID that the device will connect.</p>
+                                  <p>The Wi-Fi service set identifier (SSID) of the wireless network to which a device is connected.</p>
                                 </div>
                               </td>
                             </tr>
@@ -361,7 +370,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Start configure device&rsquo;s network. Call <code><a href="../Classes/TYAPActivator.html#/c:@M@TuyaIoTAppSDK@objc(cs)TYAPActivator(im)stop">stop()</a></code> once find the device registered successfully.</p>
+                        <p>Starts to pair a device. When the device is found to be registered, <code><a href="../Classes/TYAPActivator.html#/c:@M@TuyaIoTAppSDK@objc(cs)TYAPActivator(im)stop">stop()</a></code> is called.</p>
 
                       </div>
                       <div class="declaration">
@@ -388,7 +397,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Stop the configuration</p>
+                        <p>Stops the pairing process.</p>
 
                       </div>
                       <div class="declaration">
@@ -410,7 +419,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2021 <a class="link" href="https://developer.tuya.com" target="_blank" rel="external">Tuya</a>. All rights reserved. (Last updated: 2021-04-30)</p>
+      <p>&copy; 2021 <a class="link" href="https://developer.tuya.com" target="_blank" rel="external">Tuya</a>. All rights reserved. (Last updated: 2021-05-29)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

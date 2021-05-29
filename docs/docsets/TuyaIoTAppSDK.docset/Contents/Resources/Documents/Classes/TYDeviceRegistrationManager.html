@@ -21,9 +21,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          Tuya iOS IoT App SDK 0.9.0 Docs
+          Tuya iOS IoT App SDK 1.0.0 Docs
         </a>
-         (64% documented)
+         (65% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -36,7 +36,7 @@
     </header>
 
     <p class="breadcrumbs">
-      <a class="breadcrumb" href="../index.html">Tuya iOS IoT App SDK Reference</a>
+      <a class="breadcrumb" href="../index.html">TuyaIoTAppSDK Reference</a>
       <img class="carat" src="../img/carat.png" />
       TYDeviceRegistrationManager Class Reference
     </p>
@@ -64,6 +64,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/TYCategoryStandardCommand.html">TYCategoryStandardCommand</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/TYConstant.html">TYConstant</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/TYDataRequest.html">TYDataRequest</a>
@@ -108,13 +111,22 @@
                 <a class="nav-group-task-link" href="../Classes/TYDevicesRequestResult.html">TYDevicesRequestResult</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/TYError.html">TYError</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/TYFailedPairingDevice.html">TYFailedPairingDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/TYGateway.html">TYGateway</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/TYNetwork.html">TYNetwork</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/TYPairedDevice.html">TYPairedDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/TYPairedNBDevice.html">TYPairedNBDevice</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/TYPairedSubDevice.html">TYPairedSubDevice</a>
@@ -144,10 +156,7 @@
                 <a class="nav-group-task-link" href="../Classes/TYVagueDevice.html">TYVagueDevice</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/TuyaConstant.html">TuyaConstant</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/TuyaError.html">TuyaError</a>
+                <a class="nav-group-task-link" href="../Classes/TYWiredActivator.html">TYWiredActivator</a>
               </li>
             </ul>
           </li>
@@ -210,7 +219,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Request a device pairing token.</p>
+                        <p>Returns a device pairing token.</p>
 
                       </div>
                       <div class="declaration">
@@ -233,7 +242,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The pairing type of device.</p>
+                                  <p>The type of device pairing.</p>
                                 </div>
                               </td>
                             </tr>
@@ -245,7 +254,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The uid of which the device will bind to. It can be obtained from <code><a href="../Classes/TYUserInfo.html">TYUserInfo</a></code>.</p>
+                                  <p>The value of <code>uid</code> to which the device will be bound. You can get the value from <code><a href="../Classes/TYUserInfo.html">TYUserInfo</a></code>.</p>
                                 </div>
                               </td>
                             </tr>
@@ -257,7 +266,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>A String value represents the time zone ID. In Swift, it can be obtained from <code>TimeZone</code>, <code>NSTimeZone</code> in Objective-C.</p>
+                                  <p>The time zone ID of String type. You can get the value from <code>TimeZone</code> in Swift and from <code>NSTimeZone</code> in Objective-C.</p>
                                 </div>
                               </td>
                             </tr>
@@ -269,7 +278,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The assetID of which the device will bind to.</p>
+                                  <p>The asset ID to which the device will be bound.</p>
                                 </div>
                               </td>
                             </tr>
@@ -281,7 +290,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>When the pairing device type is BLE, it&rsquo;s needed to input the deviceUUID.</p>
+                                  <p>Required when the type of device pairing is set to Bluetooth Low Energy (Bluetooth LE).</p>
                                 </div>
                               </td>
                             </tr>
@@ -293,7 +302,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>A callback returns the device pairing token if succeed, otherwise an error.</p>
+                                  <p>Called when the task is finished and the pairing token is returned. Otherwise, an error message is returned.</p>
                                 </div>
                               </td>
                             </tr>
@@ -316,11 +325,11 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Polling device pairing result.</p>
+                        <p>Runs the polling task to check the device pairing result.</p>
 
-<p>Since device pairing is an asynchronous process, the time to successfully enter the network varies depending on the network quality, so developers need to poll the interface until the device list is queried or stop polling when the timeout expires.</p>
+<p>Device pairing is an asynchronous process. The time when a device is paired depends on the network quality. You must make the API request to check the device pairing result. The polling task is stopped when a list of paired devices is returned or when the pairing task timed out.</p>
 
-<p>The polling period is once per second, and the timeout is recommended to be 100 seconds.</p>
+<p>The polling task is run once per second. The timeout value of the pairing task is recommended to be 100 seconds.</p>
 
                       </div>
                       <div class="declaration">
@@ -343,7 +352,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Device pairing token.</p>
+                                  <p>The device pairing token.</p>
                                 </div>
                               </td>
                             </tr>
@@ -355,7 +364,345 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>A callback returns the device pairing result if succeed, which includes the succeed devices and failed devices, otherwise an error.</p>
+                                  <p>Called when the task is finished and the paired devices are returned. Otherwise, an error message is returned.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@TuyaIoTAppSDK@objc(cs)TYDeviceRegistrationManager(im)queryRegistrationGatewaysIn:completionHandle:"></a>
+                    <a name="//apple_ref/swift/Method/queryRegistrationGateways(in:completionHandle:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@TuyaIoTAppSDK@objc(cs)TYDeviceRegistrationManager(im)queryRegistrationGatewaysIn:completionHandle:">queryRegistrationGateways(in:<wbr>completionHandle:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a list of gateway devices that are bound to a specific asset.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">queryRegistrationGateways</span><span class="p">(</span><span class="k">in</span> <span class="nv">assetID</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:13TuyaIoTAppSDK7AssetIDa">AssetID</a></span><span class="p">,</span> <span class="nv">completionHandle</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt"><a href="../Classes/TYGateway.html">TYGateway</a></span><span class="p">]?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>assetID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The ID of the asset for which the gateway devices are returned.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Called when the task is finished and a list of <code><a href="../Classes/TYGateway.html">TYGateway</a></code> values is returned. Otherwise, an error message is returned.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@TuyaIoTAppSDK@objc(cs)TYDeviceRegistrationManager(im)discoverSubDevicesWithGatewayDeviceID:duration:completionHandle:"></a>
+                    <a name="//apple_ref/swift/Method/discoverSubDevices(gatewayDeviceID:duration:completionHandle:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@TuyaIoTAppSDK@objc(cs)TYDeviceRegistrationManager(im)discoverSubDevicesWithGatewayDeviceID:duration:completionHandle:">discoverSubDevices(gatewayDeviceID:<wbr>duration:<wbr>completionHandle:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enables a specific gateway device to scan for unpaired sub-devices.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">discoverSubDevices</span><span class="p">(</span><span class="nv">gatewayDeviceID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">completionHandle</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Bool</span><span class="p">,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>gatewayDeviceID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The gateway ID of String type.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>duration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The scanning duration of the gateway. Unit: seconds. Default value: <code>100</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Called when the task is finished and the success state is returned. Otherwise, an error message is returned.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@TuyaIoTAppSDK@objc(cs)TYDeviceRegistrationManager(im)stopDiscoveringSubDeviceWithGatewayDeviceID:completionHandle:"></a>
+                    <a name="//apple_ref/swift/Method/stopDiscoveringSubDevice(gatewayDeviceID:completionHandle:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@TuyaIoTAppSDK@objc(cs)TYDeviceRegistrationManager(im)stopDiscoveringSubDeviceWithGatewayDeviceID:completionHandle:">stopDiscoveringSubDevice(gatewayDeviceID:<wbr>completionHandle:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Let a particular gateway device stop discovering un-paired sub devices.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stopDiscoveringSubDevice</span><span class="p">(</span><span class="nv">gatewayDeviceID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completionHandle</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Bool</span><span class="p">,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>gatewayDeviceID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The gateway ID of String type.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Called when the task is finished and the success state is returned. Otherwise, an error message is returned.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@TuyaIoTAppSDK@objc(cs)TYDeviceRegistrationManager(im)querySubDeviceRegistrationResultWithGatewayDeviceID:discoveryTime:completionHandle:"></a>
+                    <a name="//apple_ref/swift/Method/querySubDeviceRegistrationResult(gatewayDeviceID:discoveryTime:completionHandle:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@TuyaIoTAppSDK@objc(cs)TYDeviceRegistrationManager(im)querySubDeviceRegistrationResultWithGatewayDeviceID:discoveryTime:completionHandle:">querySubDeviceRegistrationResult(gatewayDeviceID:<wbr>discoveryTime:<wbr>completionHandle:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Runs the polling task to check the sub-device pairing result.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">querySubDeviceRegistrationResult</span><span class="p">(</span><span class="nv">gatewayDeviceID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">discoveryTime</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">()</span><span class="o">.</span><span class="n">timeIntervalSince1970</span><span class="p">,</span> <span class="nv">completionHandle</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt"><a href="../Classes/TYPairedSubDevice.html">TYPairedSubDevice</a></span><span class="p">]?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>gatewayDeviceID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The gateway ID of String type.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>discoveryTime</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The start time of the period in which the specified gateway has scanned for devices. For example, if the value is set to &lsquo;1621500508&rsquo;, the server returns all sub-devices that have been paired with the gateway after the start time.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Called when the task is finished and the paired sub-devices are returned. Otherwise, an error message is returned.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@TuyaIoTAppSDK@objc(cs)TYDeviceRegistrationManager(im)pairNBDeviceWithQrCodeString:assetID:timeZoneID:completionHandle:"></a>
+                    <a name="//apple_ref/swift/Method/pairNBDevice(qrCodeString:assetID:timeZoneID:completionHandle:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@TuyaIoTAppSDK@objc(cs)TYDeviceRegistrationManager(im)pairNBDeviceWithQrCodeString:assetID:timeZoneID:completionHandle:">pairNBDevice(qrCodeString:<wbr>assetID:<wbr>timeZoneID:<wbr>completionHandle:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pairs a narrowband (NB) device.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">pairNBDevice</span><span class="p">(</span><span class="nv">qrCodeString</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">assetID</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:13TuyaIoTAppSDK7AssetIDa">AssetID</a></span><span class="p">,</span> <span class="nv">timeZoneID</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kt">TimeZone</span><span class="o">.</span><span class="n">current</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="nv">completionHandle</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/TYPairedNBDevice.html">TYPairedNBDevice</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>qrCodeString</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A QR code string of String type.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>assetID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The asset ID to which the device will be bound.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>timeZoneID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The time zone ID of String type. You can get the value from <code>TimeZone</code> in Swift and from <code>NSTimeZone</code> in Objective-C.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Called when the task is finished and the <code><a href="../Classes/TYPairedNBDevice.html">TYPairedNBDevice</a></code> value is returned. Otherwise, an error message is returned.</p>
                                 </div>
                               </td>
                             </tr>
@@ -373,7 +720,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2021 <a class="link" href="https://developer.tuya.com" target="_blank" rel="external">Tuya</a>. All rights reserved. (Last updated: 2021-04-30)</p>
+      <p>&copy; 2021 <a class="link" href="https://developer.tuya.com" target="_blank" rel="external">Tuya</a>. All rights reserved. (Last updated: 2021-05-29)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

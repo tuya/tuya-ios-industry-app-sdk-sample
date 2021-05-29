@@ -15,52 +15,73 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/dasauto/Documents/TuyaDeveloper/TuyaIoTAppSDK/Source/Activator/TYWiredActivator.swift",
+      "line": 10,
+      "symbol": "TYWiredActivator",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dasauto/Documents/TuyaDeveloper/TuyaIoTAppSDK/Source/Foundation/TYConstant.swift",
+      "line": 10,
+      "symbol": "TYConstant",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dasauto/Documents/TuyaDeveloper/TuyaIoTAppSDK/Source/Foundation/TYError.swift",
+      "line": 10,
+      "symbol": "TYError",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dasauto/Documents/TuyaDeveloper/TuyaIoTAppSDK/Source/Foundation/TYError.swift",
+      "line": 13,
+      "symbol": "TYError.parsingDataFailed",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dasauto/Documents/TuyaDeveloper/TuyaIoTAppSDK/Source/Foundation/TYError.swift",
+      "line": 15,
+      "symbol": "TYError.invalidURL",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dasauto/Documents/TuyaDeveloper/TuyaIoTAppSDK/Source/Foundation/TYError.swift",
+      "line": 17,
+      "symbol": "TYError.refreshTokenFailed",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dasauto/Documents/TuyaDeveloper/TuyaIoTAppSDK/Source/Foundation/TYError.swift",
+      "line": 19,
+      "symbol": "TYError.generateQRCodeFailed",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dasauto/Documents/TuyaDeveloper/TuyaIoTAppSDK/Source/Foundation/TYError.swift",
+      "line": 21,
+      "symbol": "TYError.devicePairingTimeout",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dasauto/Documents/TuyaDeveloper/TuyaIoTAppSDK/Source/Foundation/TYError.swift",
+      "line": 23,
+      "symbol": "TYError.serverError(code:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/dasauto/Documents/TuyaDeveloper/TuyaIoTAppSDK/Source/Foundation/TYSDK.swift",
       "line": 11,
       "symbol": "TYSDK",
       "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/dasauto/Documents/TuyaDeveloper/TuyaIoTAppSDK/Source/Foundation/TuyaConstant.swift",
-      "line": 10,
-      "symbol": "TuyaConstant",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/dasauto/Documents/TuyaDeveloper/TuyaIoTAppSDK/Source/Foundation/TuyaError.swift",
-      "line": 10,
-      "symbol": "TuyaError",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/dasauto/Documents/TuyaDeveloper/TuyaIoTAppSDK/Source/Foundation/TuyaError.swift",
-      "line": 13,
-      "symbol": "TuyaError.parsingDataFailed",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/dasauto/Documents/TuyaDeveloper/TuyaIoTAppSDK/Source/Foundation/TuyaError.swift",
-      "line": 15,
-      "symbol": "TuyaError.invalidURL",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/dasauto/Documents/TuyaDeveloper/TuyaIoTAppSDK/Source/Foundation/TuyaError.swift",
-      "line": 17,
-      "symbol": "TuyaError.refreshTokenFailed",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/dasauto/Documents/TuyaDeveloper/TuyaIoTAppSDK/Source/Foundation/TuyaError.swift",
-      "line": 19,
-      "symbol": "TuyaError.serverError(code:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
@@ -169,9 +190,23 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/dasauto/Documents/TuyaDeveloper/TuyaIoTAppSDK/Source/Model/TYGateway.swift",
+      "line": 10,
+      "symbol": "TYGateway",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/dasauto/Documents/TuyaDeveloper/TuyaIoTAppSDK/Source/Model/TYPairedDevice.swift",
       "line": 10,
       "symbol": "TYPairedDevice",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dasauto/Documents/TuyaDeveloper/TuyaIoTAppSDK/Source/Model/TYPairedNBDevice.swift",
+      "line": 10,
+      "symbol": "TYPairedNBDevice",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
@@ -323,6 +358,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/dasauto/Documents/TuyaDeveloper/TuyaIoTAppSDK/Source/RequestComposer/TYAssetsRequestComposer.swift",
+      "line": 102,
+      "symbol": "TYAssetsRequestComposer.makeGatewayListQueryUnderAssetRequest(assetID:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/dasauto/Documents/TuyaDeveloper/TuyaIoTAppSDK/Source/RequestComposer/TYDeviceControlRequestComposer.swift",
       "line": 10,
       "symbol": "TYDeviceControlRequestComposer",
@@ -415,43 +457,57 @@
     },
     {
       "file": "/Users/dasauto/Documents/TuyaDeveloper/TuyaIoTAppSDK/Source/RequestComposer/TYDeviceRegistrationRequestComposer.swift",
-      "line": 23,
+      "line": 12,
+      "symbol": "TYDevicePairingType.EZ",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dasauto/Documents/TuyaDeveloper/TuyaIoTAppSDK/Source/RequestComposer/TYDeviceRegistrationRequestComposer.swift",
+      "line": 26,
       "symbol": "TYDeviceRegistrationRequestComposer",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dasauto/Documents/TuyaDeveloper/TuyaIoTAppSDK/Source/RequestComposer/TYDeviceRegistrationRequestComposer.swift",
-      "line": 24,
+      "line": 27,
       "symbol": "TYDeviceRegistrationRequestComposer.makeTokenRequest(pairingType:uid:timeZoneID:assetID:deviceUUID:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dasauto/Documents/TuyaDeveloper/TuyaIoTAppSDK/Source/RequestComposer/TYDeviceRegistrationRequestComposer.swift",
-      "line": 43,
+      "line": 46,
       "symbol": "TYDeviceRegistrationRequestComposer.makeRegistrationResultRequest(token:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dasauto/Documents/TuyaDeveloper/TuyaIoTAppSDK/Source/RequestComposer/TYDeviceRegistrationRequestComposer.swift",
-      "line": 50,
+      "line": 53,
       "symbol": "TYDeviceRegistrationRequestComposer.makeEnableGatewayDeviceSearchForSubDeviceRequest(gatewayDeviceID:duration:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dasauto/Documents/TuyaDeveloper/TuyaIoTAppSDK/Source/RequestComposer/TYDeviceRegistrationRequestComposer.swift",
-      "line": 62,
+      "line": 65,
       "symbol": "TYDeviceRegistrationRequestComposer.makeStopDeviceFromSearchingForSubDeviceRequest(gatewayDeviceID:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/dasauto/Documents/TuyaDeveloper/TuyaIoTAppSDK/Source/RequestComposer/TYDeviceRegistrationRequestComposer.swift",
-      "line": 74,
+      "line": 77,
       "symbol": "TYDeviceRegistrationRequestComposer.makeResultForSubDeviceListRequest(gatewayDeviceID:discoveryTime:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dasauto/Documents/TuyaDeveloper/TuyaIoTAppSDK/Source/RequestComposer/TYDeviceRegistrationRequestComposer.swift",
+      "line": 85,
+      "symbol": "TYDeviceRegistrationRequestComposer.makeNBDevicePairingRequest(qrCodeString:assetID:timeZoneID:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },

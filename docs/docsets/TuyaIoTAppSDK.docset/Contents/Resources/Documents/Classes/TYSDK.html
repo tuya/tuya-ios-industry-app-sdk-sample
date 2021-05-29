@@ -21,9 +21,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          Tuya iOS IoT App SDK 0.9.0 Docs
+          Tuya iOS IoT App SDK 1.0.0 Docs
         </a>
-         (64% documented)
+         (65% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -36,7 +36,7 @@
     </header>
 
     <p class="breadcrumbs">
-      <a class="breadcrumb" href="../index.html">Tuya iOS IoT App SDK Reference</a>
+      <a class="breadcrumb" href="../index.html">TuyaIoTAppSDK Reference</a>
       <img class="carat" src="../img/carat.png" />
       TYSDK Class Reference
     </p>
@@ -64,6 +64,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/TYCategoryStandardCommand.html">TYCategoryStandardCommand</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/TYConstant.html">TYConstant</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/TYDataRequest.html">TYDataRequest</a>
@@ -108,13 +111,22 @@
                 <a class="nav-group-task-link" href="../Classes/TYDevicesRequestResult.html">TYDevicesRequestResult</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/TYError.html">TYError</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/TYFailedPairingDevice.html">TYFailedPairingDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/TYGateway.html">TYGateway</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/TYNetwork.html">TYNetwork</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/TYPairedDevice.html">TYPairedDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/TYPairedNBDevice.html">TYPairedNBDevice</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/TYPairedSubDevice.html">TYPairedSubDevice</a>
@@ -144,10 +156,7 @@
                 <a class="nav-group-task-link" href="../Classes/TYVagueDevice.html">TYVagueDevice</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/TuyaConstant.html">TuyaConstant</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/TuyaError.html">TuyaError</a>
+                <a class="nav-group-task-link" href="../Classes/TYWiredActivator.html">TYWiredActivator</a>
               </li>
             </ul>
           </li>
@@ -264,7 +273,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initialize the SDK. This will load necessary information to the memory.</p>
+                        <p>Initializes the SDK to load necessary information to the memory.</p>
 
                       </div>
                       <div class="declaration">
@@ -287,7 +296,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The Access ID/Client ID of your application, which can be obtained from <a href="https://iot.tuya.com/cloud/">Tuya IoT Platform</a>.</p>
+                                  <p>The value of Access ID/Client ID of your application. You can get the value from the <a href="https://iot.tuya.com/cloud/">Tuya IoT Platform</a>.</p>
                                 </div>
                               </td>
                             </tr>
@@ -299,7 +308,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The Access Secret/Client Secret of your application, which can be obtained from <a href="https://iot.tuya.com/cloud/">Tuya IoT Platform</a>.</p>
+                                  <p>The value of Access Secret/Client Secret of your application. You can get the value from the <a href="https://iot.tuya.com/cloud/">Tuya IoT Platform</a>.</p>
                                 </div>
                               </td>
                             </tr>
@@ -311,7 +320,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The region for Tuya Open API request.</p>
+                                  <p>The region in which the API request is processed.</p>
                                 </div>
                               </td>
                             </tr>
@@ -334,7 +343,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initialize the SDK. This will load necessary information to the memory.</p>
+                        <p>Initializes the SDK to load necessary information to the memory.</p>
 
                       </div>
                       <div class="declaration">
@@ -357,7 +366,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The Access ID/Client ID of your application, which can be obtained from <a href="https://iot.tuya.com/cloud/">Tuya IoT Platform</a>.</p>
+                                  <p>The value of Access ID/Client ID of your application. You can get the value from the <a href="https://iot.tuya.com/cloud/">Tuya IoT Platform</a>.</p>
                                 </div>
                               </td>
                             </tr>
@@ -369,7 +378,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The Access Secret/Client Secret of your application, which can be obtained from <a href="https://iot.tuya.com/cloud/">Tuya IoT Platform</a>.</p>
+                                  <p>The value of Access Secret/Client Secret of your application. You can get the value from the <a href="https://iot.tuya.com/cloud/">Tuya IoT Platform</a>.</p>
                                 </div>
                               </td>
                             </tr>
@@ -381,7 +390,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The custom host name for network request, make sure not to add a <code>/</code> at the end of the string, e.g. &ldquo;<a href="https://openapi.myhost.com">https://openapi.myhost.com</a>&rdquo;.</p>
+                                  <p>The custom name of the host that processes the request. Do not add a forward slash (<code>/</code>) to the end of the string. Example: <a href="https://openapi.myhost.com">https://openapi.myhost.com</a>.</p>
                                 </div>
                               </td>
                             </tr>
@@ -399,7 +408,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2021 <a class="link" href="https://developer.tuya.com" target="_blank" rel="external">Tuya</a>. All rights reserved. (Last updated: 2021-04-30)</p>
+      <p>&copy; 2021 <a class="link" href="https://developer.tuya.com" target="_blank" rel="external">Tuya</a>. All rights reserved. (Last updated: 2021-05-29)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
