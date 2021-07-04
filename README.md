@@ -113,7 +113,7 @@ struct AppKey {
 ### Account Login
 
 <img src="https://images.tuyacn.com/app/IoTAppSDK/ios_iot_sdk_login.png" width="30%" /> 
-<img src="https://images.tuyacn.com/app/IoTAppSDK/android_home.png" width="30%" /> 
+<img src="https://images.tuyacn.com/app/IoTAppSDK/ios_sample_home.png" width="30%" /> 
 
 ### Swich Asset
 
@@ -124,7 +124,7 @@ struct AppKey {
 <img src="https://images.tuyacn.com/app/IoTAppSDK/ios_iot_sdk_ap.png" width="30%" /> 
 <img src="https://images.tuyacn.com/app/IoTAppSDK/ios_iot_sdk_qrMode.png" width="30%" /> 
 <img src="https://images.tuyacn.com/app/IoTAppSDK/android_nb_device.png" width="30%" /> 
-<img src="https://images.tuyacn.com/app/IoTAppSDK/android_wired.png" width="30%" /> 
+<img src="https://images.tuyacn.com/app/IoTAppSDK/ios_wired_home.png" width="30%" /> 
 
 ### Device List and Details
 
