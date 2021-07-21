@@ -137,4 +137,4 @@ You can provide feedback on your issue via **GitHub Issue** or [Ticket](https://
 
 ## License
 
-Tuya Industry IoT App SDK Sample is available under the MIT license. Please see the [LICENSE](LICENSE) file for more info.
+Tuya Industry App SDK Sample is available under the MIT license. Please see the [LICENSE](LICENSE) file for more info.
