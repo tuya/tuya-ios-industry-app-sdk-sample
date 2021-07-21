@@ -1,10 +1,10 @@
-# Tuya IoT App SDK iOS Sample
+# Tuya Industry App SDK iOS Sample
 
 ## Functional Overview
 
-Tuya IoT App SDK is an important part of the Tuya SaaS Development Framework product series. This sample provides examples of basic functions such as device network configuration, login and registration, and asset management of Tuya Open API.
+This sample provides Tuya Industry App SDK examples of basic functions such as device network configuration, login and registration, and asset management of Tuya Open API.
 
-IoT App SDK Sample has the following functions:
+Industry App SDK Sample has the following functions:
 
 - User module (login, logout)
 - Asset module (asset query, selection)
@@ -13,11 +13,11 @@ IoT App SDK Sample has the following functions:
 
 ## API Reference Docs
 
-iOS IoT App SDK API Reference: https://tuya.github.io/tuya-ios-iot-app-sdk-sample/
+iOS Industry App SDK API Reference: https://tuya.github.io/tuya-ios-iot-app-sdk-sample/
 
 ## Quick Start
 
-1. The Tuya IoT App SDK is distributed through [CocoaPods](http://cocoapods.org/) and other dependencies in this sample. Make sure that you have installed CocoaPods. If not, run the following command to install CocoaPods first:
+1. The Tuya Industry App SDK is distributed through [CocoaPods](http://cocoapods.org/) and other dependencies in this sample. Make sure that you have installed CocoaPods. If not, run the following command to install CocoaPods first:
 
 ```bash
 sudo gem install cocoapods
@@ -137,4 +137,4 @@ You can provide feedback on your issue via **GitHub Issue** or [Ticket](https://
 
 ## License
 
-Tuya iOS IoT App SDK Sample is available under the MIT license. Please see the [LICENSE](LICENSE) file for more info.
+Tuya Industry IoT App SDK Sample is available under the MIT license. Please see the [LICENSE](LICENSE) file for more info.
