@@ -10,7 +10,6 @@
 
 - Added New Device Pairing.
    - Wired Mode
-   - EZ Mode
    - NB Scan QR Code Mode
    - Zigbee gateway subdevice
 - Bug fixes.
