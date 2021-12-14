@@ -15,6 +15,73 @@ Industry App SDK Sample has the following functions:
 
 iOS Industry App SDK API Reference: https://tuya.github.io/tuya-ios-iot-app-sdk-sample/
 
+## Prerequisites
+
+1. A developer account is registered on the [Tuya IoT Development Platform](https://auth.tuya.com/register?from=https%3A%2F%2Fdeveloper.tuya.com%2Fcn%2Fdocs%2Fapp-development%2F).
+
+2. Your account identity is verified.
+
+	![Identity Verification](https://airtake-public-data-1254153901.cos.ap-shanghai.myqcloud.com/content-platform/hestia/163159555453b1793f68b.png)
+
+## Before you start
+
+This section describes the steps to configure an industry project on top of Cloud Development. For more information, see [Quick Start](https://developer.tuya.com/en/docs/iot/quick-start1?id=K95ztz9u9t89n).
+
+1. Log in to the [Tuya IoT Development Platform](https://iot.tuya.com/).
+
+2. In the left-side navigation bar, choose **Cloud** > **Development**.
+
+3. On the page that appears, click **Create Cloud Project**.
+
+4. In the **Create Cloud Project** dialog box:
+
+	- Set **Project Name**, **Description**, **Industry**, and **Data Center**.
+
+	> **Info:**
+	>	Tuya deploys six data centers globally and provides reliable IoT cloud services for customers worldwide. You can select one or more data centers where your services are deployed. This setting can be changed later.
+
+	- From the **Development Method** drop-down list, select **Custom**.
+
+		<img src="https://airtake-public-data-1254153901.cos.ap-shanghai.myqcloud.com/content-platform/hestia/16389595613504029df2c.png" width="550">
+
+5. Click **Create** to continue with project configuration.
+
+6. On the **Authorize API Services** page, besides the default selections, you need to subscribe to the API products such as **Device Status Notification** and **Industry Project Client Service**, and click **Authorize**.
+
+	<img src="https://airtake-public-data-1254153901.cos.ap-shanghai.myqcloud.com/content-platform/hestia/16389596785f317e74027.png" width="550">
+
+> **Info:**
+>	By default, the API services **IoT Core** and **Authorization** are selected.
+	
+
+7. Click **Authorize**.
+
+8. Enter the asset and account information. Then, the asset will be automatically created and the account will be granted access to the asset. For more information, see [Asset Management](https://developer.tuya.com/en/docs/app-development/iot_app_sdk_core_asset?id=Kaq76kp0ifm74).
+
+> **Info:**
+>	Tuya provides [IoT Core](https://www.tuya.com/vas/tmpl/apply?code=IOT_CORE) that drives your success with industry-specific device connection and management capabilities. This service can quickly integrate with existing systems and boost your development of IoT core applications targeted to different industry scenarios.
+
+
+## Create an application
+
+This section describes how to create an application in the cloud project.
+
+1. Open your cloud project.
+
+2. Choose **Authorization** > **App Authorization**.
+
+	![App Authorization](https://airtake-public-data-1254153901.cos.ap-shanghai.myqcloud.com/content-platform/hestia/1638959749fee62767c17.png)
+
+3. In the **Add Application** dialog box, configure the application information. Select an application type for **Android** or **iOS**.
+
+	<img src="https://airtake-public-data-1254153901.cos.ap-shanghai.myqcloud.com/content-platform/hestia/16389595617bdc33fa878.png" width="550">
+
+4. Enter the information in the fields for the specified application type. If you select the application for Android, you must get the value of **SHA1**. For more information, see [How to Get SHA1 and SHA256 Keys](https://developer.tuya.com/en/docs/app-development/iot_app_sdk_core_sha1?id=Kao7c7b139vrh).
+
+> **Important:**
+>	The generated keystore file and encryption information must be kept well. They will be used for subsequent [SDK integration](https://developer.tuya.com/en/docs/app-development/iot_app_sdk_core_integrate?id=Kao6tmwqq0va3).
+
+
 ## Quick Start
 
 1. The Tuya Industry App SDK is distributed through [CocoaPods](http://cocoapods.org/) and other dependencies in this sample. Make sure that you have installed CocoaPods. If not, run the following command to install CocoaPods first:
@@ -30,74 +97,11 @@ pod setup
 pod install
 ```
 
-3. This sample requires you to have a pair of keys from the [Tuya IoT Platform](https://developer.tuya.com/), and register a developer account if you don't have one. Then, perform the following steps:
-
-   1. Log in to Tuya Smart [IoT Platform](https://iot.tuya.com/cloud/) and verify your account with enterprise authentication.
-   2. Create **Industry Solutions** type project.
-   3. On the **Projects** page, click **Create**.
-      ![Create Project](https://images.tuyacn.com/app/iotappsample/en/cr_product_new.png)
-   4. On the **Create Project** page, configure **Project Name**, **Project Type**, **Description** and **Industry**.
-
-   > **Description:** Select **Industry Solutions** in **Industry Type** . That is, based on assets and user systems, build IoT SaaS projects in any industry scenario. Multiple applications can be created under industry projects to share the same assets and user resources.
-
-   5. Click **OK** to complete the project creation.
-
-4. Create an application.
-
-   1. In the **Projects**>**My Project** area, click the target project.
-   2. In the top navigation bar, click **Applications**>**App**.
-      ![image.png](https://images.tuyacn.com/app/iotappsample/en/cr_app_new.png)
-   3. In the **Add Application** window, configure the application information. Select the iOS application type. Please make sure the bundle identifier is the same as your created Xcode project.
-      ![image.png](https://images.tuyacn.com/fe-static/docs/img/a17b897e-4db2-4b1a-8097-d49f6eb74f34.png)
-
-5. Create users.
-
-   1. In the **Projects**>**My Project** area, click the target project.
-   2. In the top navigation bar, click **Users**.
-      ![image.png](https://images.tuyacn.com/app/iotappsample/en/cr_user_new.png)
-   3. Click **Add User**.
-   4. In the **Add User** window, enter the user account and password, and click **OK**.
-
-6. Create assets.
-
-   1. In the **Projects**>**My Project** area, click the target project.
-   2. In the top navigation bar, click **Assets**.
-      ![image.png](https://images.tuyacn.com/app/iotappsample/en/addAsset.png)
-   3. Click **New Asset**.
-   4. In the **New Asset** window, enter the asset name and click **OK**.
-
-7. Asset authorized users.
-
-   1. In the **Projects**>**My Project** area, click the target project.
-   2. In the top navigation bar, click **Assets**.
-      ![image.png](https://images.tuyacn.com/app/iotappsample/en/cr_auth_new.png)
-   3. Click **Manage** under the **Operation** column of the target project.
-   4. On the **Authorized User** tab, click **Add Authorization**.
-   5. In the **Add Authorized User** window, add the account information to be authorized, and click **OK**.
-   
-8. API Products Subscription
-
-   **1.** Go to **Projects** > **API Products** > **All Products**, click **Industry Project**, and subscribe to your desired API products.
-	![image.png](https://images.tuyacn.com/app/Hanh/APIproducts.png)
-	
-	**You need to subscribe to these API Products to use this sample.**
-	
-	![image.png](https://images.tuyacn.com/app/hass/open_api_products.jpg)
-	
-	**2.** Go to **Projects** > **API Products** > **Subscribed Products**. Click one of the API products to subscribe.
-	
-	![image.png](https://images.tuyacn.com/app/Hanh/buyapi.png)
-	
-	**3.** Click **Project** > **New Authorization** to authorize your project to use this API.
-	![image.png](https://images.tuyacn.com/app/Hanh/tip.png)
-	![image.png](https://images.tuyacn.com/app/Hanh/newauthorization.png)
-	![image.png](https://images.tuyacn.com/app/Hanh/apiproductauthorization.png)
-
-9. Obtain the Client ID and Client Secret of the created iOS application on the **Applications**>**App**.
+3. Obtain the Client ID and Client Secret of the created iOS application on the **Applications**>**App**.
    <img src="https://images.tuyacn.com/app/hass/ios_keys_intro.png" style="zoom:50%;" />
-10. Open the `TuyaIoTAppSDKSample-iOS-Swift.xcworkspace` pod generated for you.
+4. Open the `TuyaIoTAppSDKSample-iOS-Swift.xcworkspace` pod generated for you.
 
-11. Fill in the AppKey and AppSecret in the **AppKey.swift** file.
+5. Fill in the AppKey and AppSecret in the **AppKey.swift** file.
 
 ```swift
 struct AppKey {
