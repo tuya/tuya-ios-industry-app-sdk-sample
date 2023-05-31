@@ -1,9 +1,14 @@
-source 'https://cdn.cocoapods.org/'
-source 'https://github.com/TuyaInc/TuyaPublicSpecs.git'
+source 'https://cocoapods.tuya-inc.top:7799/'
+source 'https://github.com/tuya/tuya-industry-pod-specs'
+
 
 target 'TuyaIoTAppSDKSample-iOS-Swift' do
   pod 'SVProgressHUD'
-  pod 'TuyaIoTAppSDK', '1.0.0'
+  pod 'Masonry', :modular_headers => true
+
+  
+  pod 'IndustryLinkSDK', '2.0.0-beta.2'
+
 end
 
 post_install do |installer|

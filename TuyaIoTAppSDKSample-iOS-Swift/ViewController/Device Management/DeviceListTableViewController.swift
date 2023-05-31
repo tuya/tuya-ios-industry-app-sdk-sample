@@ -5,17 +5,25 @@
 //  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
 
 import UIKit
-import TuyaIoTAppSDK
+import IndustryAssetKit
+import IndustryDeviceKit
+import IndustryDeviceImpl
+import IndustryActivatorKit
+
+import TuyaSmartBLEKit
 
 class DeviceListTableViewController: UITableViewController {
     // MARK: - Property
-    var deviceList = [TYDevice]()
+    var deviceList = [IAssetDevice]()
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         requestDeviceList()
+    
+//        let discovery: IDiscovery = DiscoveryService.shared.discovery(.BLE)
+//        discovery.startDiscovery()
     }
 
     // MARK: - Table view data source
@@ -31,62 +39,101 @@ class DeviceListTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "device-list-cell")!
         let model = deviceList[indexPath.row]
-        cell.textLabel?.text = model.name
-        cell.detailTextLabel?.text = model.isOnline == true ? "online" : "offline"
-    
+        cell.textLabel?.text = model.deviceName
+        
+        let device: IDevice = IndustryDevice(deviceId: model.deviceId)
+        cell.detailTextLabel?.text = device.isOnline == true ? "online" : "offline"
+        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let device = deviceList[indexPath.row]
-        if device.isOnline {
-            let storyboard = UIStoryboard(name: "DeviceList", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "DeviceControlTableViewController") as! DeviceControlTableViewController
-            vc.device = device
-            navigationController?.pushViewController(vc, animated: true)
-        } else {
-            SVProgressHUD.showInfo(withStatus: "Device Offline")
+        SVProgressHUD.show()
+        DeviceService.shared.load(deviceList[indexPath.row].deviceId) {[weak self] device in
+            SVProgressHUD.dismiss()
+            if device.deviceType == .wifiGatewayDevice || device.deviceType == .zigbeeGatewayDevice || device.deviceType == .infraredGatewayDevice || device.deviceType == .sigMeshGatewayDevice {
+                let storyboard = UIStoryboard(name: "SubDeviceList", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "SubDeviceViewController") as! SubDeviceViewController
+                vc.gateway = device
+                self?.navigationController?.pushViewController(vc, animated: true)
+            } else {
+                let storyboard = UIStoryboard(name: "DeviceList", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "DeviceControlTableViewController") as! DeviceControlTableViewController
+                vc.device = device
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }
+            
+        } failure: { error in
+            SVProgressHUD.dismiss()
+            SVProgressHUD.showError(withStatus: error.localizedDescription)
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle != .delete {
+            return
+        }
+        
+        let removeAction = UIAlertAction(title: NSLocalizedString("Remove", comment: "Perform remove device action"), style: .destructive) { [weak self] (action) in
+            guard let self = self else { return }
+            let deviceId = self.deviceList[indexPath.row].deviceId
+            
+            SVProgressHUD.show()
+            DeviceService.shared.remove(deviceId) {
+                SVProgressHUD.dismiss()
+                self.deviceList.removeAll()
+                self.requestDeviceList()
+            } failure: { error in
+                SVProgressHUD.dismiss()
+                SVProgressHUD.showError(withStatus: "Remove failed")
+            }
+        }
+        
+        let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel)
+        
+        let alert = UIAlertController(title: NSLocalizedString("Remove the Device?", comment: ""), message: NSLocalizedString("If you choose to remove the device, you'll no long hold control over this device.", comment: ""), preferredStyle: .actionSheet)
+        alert.addAction(removeAction)
+        alert.addAction(cancelAction)
+                
+        self.present(alert, animated: true, completion: nil)
     }
 
     // MARK: - Private method
+    static var lastRowKey:String? = nil
     private func requestDeviceList() {
-        guard let assetID = UserModel.shared.asset?.id else {
+        guard let assetID = UserModel.shared.asset?.assetId else {
             SVProgressHUD.showError(withStatus: "Please select an asset.")
             navigationController?.popViewController(animated: true)
             return
         }
         
         SVProgressHUD.show()
-        TYDeviceManager().queryDeviceIDList(under: assetID) { (result, error) in
-            
-            if error == nil && result?.devices.count == 0 {
-                SVProgressHUD.showInfo(withStatus: "No device.")
-                return
-            }
-            
-            let array = result?.devices
-            if (array != nil) {
-                var idArray = [String]()
-                array?.forEach({ (device) in
-                    idArray.append(device.id)
-                })
-
-                TYDeviceManager().queryDevicesInfo(of: idArray) { [weak self] (deviceArray, error) in
-                    if (deviceArray != nil) {
-                        guard let self = self else { return }
-                        self.deviceList = deviceArray!
-                        self.tableView.reloadData()
-                        SVProgressHUD.dismiss()
-                    } else {
-                        SVProgressHUD.showInfo(withStatus: "Failed to fetch devices.")
-                    }
-                }
+        AssetService.shared.devices(assetId: assetID, lastRowKey: DeviceListTableViewController.lastRowKey) { [weak self] assetdDeviceList in
+            guard let self = self else { return }
+            if assetdDeviceList.devices.count > 0 {
+                self.deviceList.append(contentsOf: assetdDeviceList.devices)
+                DeviceListTableViewController.lastRowKey = assetdDeviceList.lastRowKey
+                self.requestDeviceList()
+                self.tableView.reloadData()
             } else {
-                SVProgressHUD.showInfo(withStatus: "Failed the fetch devices' ID.")
+                DeviceListTableViewController.lastRowKey = nil
+                self.tableView.reloadData()
             }
+            SVProgressHUD.dismiss()
+            
+        } failure: { error in
+            SVProgressHUD.dismiss()
+            SVProgressHUD.showInfo(withStatus: "Failed to fetch devices.")
         }
     }
 }

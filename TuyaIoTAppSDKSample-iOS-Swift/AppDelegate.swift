@@ -5,7 +5,10 @@
 //  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
 
 import UIKit
-import TuyaIoTAppSDK
+import IndustryLinkMQTTPlugin
+import TuyaSmartNetworkKit
+import IndustryUserImpl
+import IndustryLinkSDK
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,18 +17,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
+             
+        IndustryLinkSDK.initialize(withAppKey: AppKey.appKey, appSecret: AppKey.appSecret, clientId: AppKey.clientID, clientSecret: AppKey.clientSecret)
+        IndustryLinkSDK.host = AppKey.host;
         
-        let location = UserModel.location()
-        TYSDK.initialize(clientID: AppKey.clientID, clientSecret: AppKey.clientSecret, hostRegion: location)
+        MQTTBusinessPlugin.initializePlugin()
+
         #if DEBUG
-        TYSDK.isDebugMode = true
+        IndustryLinkSDK.debugMode = true
         #endif
         
         if #available(iOS 13.0, *) {
             // Will go into scene delegate
             
         } else {
-            if UserDefaults.standard.bool(forKey: "isLogin") {
+            
+            if let isLogin = UserService.shared().user()?.isLogin() {
+                print("登录成功：\(isLogin)")
                 let storyboard = UIStoryboard(name: "TuyaSmartMain", bundle: nil)
                 let vc = storyboard.instantiateInitialViewController()
                 window?.rootViewController = vc
@@ -53,7 +61,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
 }
-
