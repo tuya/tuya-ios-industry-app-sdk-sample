@@ -5,12 +5,11 @@
 //  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
 
 import UIKit
-import TuyaIoTAppSDK
+import IndustryAssetKit
 
 class AssetListTableViewController: UITableViewController {
     
-    var assetList = [TYVagueAsset]()
-    let assetManager = TYAssetManager()
+    var assetList = [IAsset]()
 
     var parentAssetID: String?
     var parentAssetName: String?
@@ -36,28 +35,42 @@ class AssetListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "asset-list-cell", for: indexPath)
-        cell.textLabel?.text = assetList[indexPath.row].name
+        let asset = assetList[indexPath.row]
+
+        cell.textLabel?.text = asset.assetName
+        cell.detailTextLabel?.text = "sub asset count \(asset.currentSubAssetNum), device count \(asset.currentAssetDeviceNum)"
+        
+        if (asset.currentSubAssetNum > 0) {
+            cell.textLabel?.textColor = UIColor.black
+            cell.accessoryType = .disclosureIndicator
+
+        }else{
+            cell.textLabel?.textColor = UIColor.lightGray
+            cell.accessoryType = .none
+        }
+        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
+        let asset = assetList[indexPath.row]
+        if (asset.currentSubAssetNum == 0) {return}
+        
         let vc = storyboard!.instantiateInitialViewController() as! AssetListTableViewController
-        vc.parentAssetID = assetList[indexPath.row].id
-        vc.parentAssetName = assetList[indexPath.row].name
+        vc.parentAssetID = assetList[indexPath.row].assetId
+        vc.parentAssetName = assetList[indexPath.row].assetName
         navigationController?.pushViewController(vc, animated: true)
     }
     
     private func requestAssetList(parentID: String? = nil) {
-        assetManager.queryAssets(parentAssetID: parentID) { [weak self] (result, error) in
-            if (result != nil) {
-                guard let self = self else { return }
-                self.assetList.append(contentsOf: result!.assets)
-                self.tableView.reloadData()
-            } else {
-                SVProgressHUD.showError(withStatus: error?.localizedDescription)
-            }
+        AssetService.shared.subAssets(assetId: parentID) {[weak self] assets in
+            guard let self = self else { return }
+            self.assetList.append(contentsOf: assets)
+            self.tableView.reloadData()
+        } failure: { error in
+            SVProgressHUD.showError(withStatus: error.localizedDescription)
         }
     }
 

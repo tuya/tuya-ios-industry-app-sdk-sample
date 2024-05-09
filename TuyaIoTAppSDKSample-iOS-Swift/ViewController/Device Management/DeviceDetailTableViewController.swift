@@ -5,7 +5,7 @@
 //  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
 
 import UIKit
-import TuyaIoTAppSDK
+import IndustryDeviceKit
 
 class DeviceDetailTableViewController: UITableViewController {
     
@@ -18,27 +18,28 @@ class DeviceDetailTableViewController: UITableViewController {
     var newName: String = ""
     
     // MARK: - Property
-    var device: TYDevice?
+    var device: IDevice?
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        deviceIDLabel.text = device?.id
-        ipAddressLabel.text = device?.ipAddress
+        deviceIDLabel.text = device?.deviceId
         productName.text = device?.name
+        device?.delegate = self
     }
 
     // MARK: - IBAction
     @IBAction func removeDeviceTapped(_ sender: UIButton) {
         let removeAction = UIAlertAction(title: NSLocalizedString("Remove", comment: "Perform remove device action"), style: .destructive) { [weak self] (action) in
             guard let self = self else { return }
-            TYDeviceManager().removeDevice(self.device!.id) { (bool, error) in
-                if bool == true {
-                    SVProgressHUD.showInfo(withStatus: "Remove success")
-                    self.navigationController?.popToRootViewController(animated: true)
-                    return
-                }
+            guard let device = self.device, let deviceId = device.deviceId else {
+                return
+            }
+            DeviceService.shared.remove(deviceId) {
+                SVProgressHUD.showInfo(withStatus: "Remove success")
+                self.navigationController?.popToRootViewController(animated: true)
+            } failure: { error in
                 SVProgressHUD.showError(withStatus: "Remove failed")
             }
         }
@@ -64,12 +65,14 @@ class DeviceDetailTableViewController: UITableViewController {
         let confirmAction = UIAlertAction.init(title: "OK", style: .default) { (action) in
             
             if self.newName.count == 0 { return }
-            TYDeviceManager().modifyDeviceName(for: self.device!.id, to: self.newName) { (bool, error) in
-                if bool == true {
-                    SVProgressHUD.showInfo(withStatus: "Success")
-                } else {
-                    SVProgressHUD.showError(withStatus: "Fail")
-                }
+            guard let device = self.device, let deviceId = device.deviceId else {
+                return
+            }
+
+            DeviceService.shared.rename(deviceId, newName: self.newName) {
+                SVProgressHUD.showInfo(withStatus: "Success")
+            } failure: { error in
+                SVProgressHUD.showError(withStatus: "Fail")
             }
 
         }
@@ -94,6 +97,15 @@ class DeviceDetailTableViewController: UITableViewController {
         removeDeviceButton.sendActions(for: .touchUpInside)
         
         
+    }
+    
+}
+
+
+extension DeviceDetailTableViewController: IDeviceDelegate {
+    
+    func deviceInfoUpdated(device: IDevice) {
+        productName.text = device.name
     }
     
 }

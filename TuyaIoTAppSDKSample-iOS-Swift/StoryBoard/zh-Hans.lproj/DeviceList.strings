@@ -8,7 +8,7 @@
 "8hw-cY-PzK.title" = "设备列表";
 
 /* Class = "UILabel"; text = "MAC Address"; ObjectID = "9y0-Jg-cWl"; */
-"9y0-Jg-cWl.text" = "MAC 地址";
+"9y0-Jg-cWl.text" = "名称";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "11T-VB-iBU"; */
 "11T-VB-iBU.text" = "标题";

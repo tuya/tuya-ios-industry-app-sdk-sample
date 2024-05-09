@@ -5,7 +5,8 @@
 //  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
 
 import Foundation
-//import TuyaSmartDeviceKit
+import IndustryDeviceKit
+
 
 enum DeviceControlCell: String {
     case switchCell = "device-switch-cell"
@@ -14,18 +15,18 @@ enum DeviceControlCell: String {
     case stringCell = "device-string-cell"
     case labelCell = "device-label-cell"
     
-    static func cellIdentifier(with type: String) -> Self {
+    static func cellIdentifier(with type: DpSchemaType) -> Self {
 
         switch type {
-        case "Boolean":
+        case .bool:
             return Self.switchCell
-        case "Enum":
+        case .enumeration:
             return Self.enumCell
-        case "value", "Integer":
+        case .numeric:
             return Self.sliderCell
-        case "string":
+        case .string:
             return Self.stringCell
-        case "Json":
+        case .bitmap:
             return Self.labelCell
     
         default:

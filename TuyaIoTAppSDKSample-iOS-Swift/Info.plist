@@ -20,6 +20,12 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>This will allow the app to find and connect Bluetooth accessories. This app may also use Bluetooth to locate Bluetooth device.</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>To add or use Bluetooth devices, enable Bluetooth on your mobile phone.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Use camera to scan QR code.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -55,8 +61,6 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSCameraUsageDescription</key>
-	<string>Use camera to scan QR code.</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

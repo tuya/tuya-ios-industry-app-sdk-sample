@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Code Pair View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="QRCodePairViewController" customModule="TuyaIoTAppSDKSample_iOS_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please scan the QR code from 15 to 20 cm away" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgI-7l-Zqz">
+                                <rect key="frame" x="24" y="492" width="366" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXq-ba-0cu">
+                                <rect key="frame" x="156.5" y="831" width="101" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="hear a beep"/>
+                                <connections>
+                                    <action selector="start:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Flh-06-2uu"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lD2-1P-ytG">
+                                <rect key="frame" x="66" y="144" width="282" height="282"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lD2-1P-ytG" secondAttribute="height" id="c9x-9a-vYU"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rgI-7l-Zqz" firstAttribute="top" secondItem="lD2-1P-ytG" secondAttribute="bottom" constant="66" id="1qb-ic-Q2h"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="GXq-ba-0cu" secondAttribute="bottom" id="9BL-YO-AaF"/>
+                            <constraint firstItem="lD2-1P-ytG" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="100" id="CXd-DW-3JN"/>
+                            <constraint firstItem="rgI-7l-Zqz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="Yom-oE-ruk"/>
+                            <constraint firstItem="lD2-1P-ytG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="66" id="a2P-eK-Pur"/>
+                            <constraint firstItem="GXq-ba-0cu" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="f1o-rH-vB8"/>
+                            <constraint firstItem="lD2-1P-ytG" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="l6y-V5-SNs"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="rgI-7l-Zqz" secondAttribute="trailing" constant="24" id="ynR-pJ-i5k"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="qrCodeImage" destination="lD2-1P-ytG" id="URk-18-zhp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="67" y="188"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" systemColor="labelColor"/>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

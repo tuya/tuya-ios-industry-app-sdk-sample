@@ -5,7 +5,7 @@
 //  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
 
 import UIKit
-import TuyaIoTAppSDK
+import IndustryUserKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -16,7 +16,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             self.window = UIWindow(windowScene: windowScene)
             
-            if UserDefaults.standard.bool(forKey: "isLogin") {
+            let isLogin: Bool? = UserService.shared().user()?.isLogin()
+            if isLogin == true {
                 // User has already logged, launch the app with the main view controller.
                 let storyboard = UIStoryboard(name: "TuyaSmartMain", bundle: nil)
                 let vc = storyboard.instantiateInitialViewController()

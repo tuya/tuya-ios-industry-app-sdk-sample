@@ -3,20 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F673B5A27DF2BF60053462D /* BluetoothDualModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F673B5927DF2BF60053462D /* BluetoothDualModeViewController.swift */; };
+		3F8BD0F827C36F6C00F9AD9D /* QRScanPairMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F8BD0F727C36F6C00F9AD9D /* QRScanPairMode.storyboard */; };
+		3F8BD0FA27C3735B00F9AD9D /* QRScanPairViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8BD0F927C3735B00F9AD9D /* QRScanPairViewController.swift */; };
+		3F8BD10F27C4958200F9AD9D /* QRScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8BD10E27C4958200F9AD9D /* QRScanViewController.swift */; };
+		3FB30AD42796B3FF00BD44CA /* QRCodePair.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB30AD32796B3FF00BD44CA /* QRCodePair.storyboard */; };
+		3FB30AD62796B4A000BD44CA /* QRCodePairViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB30AD52796B4A000BD44CA /* QRCodePairViewController.swift */; };
+		3FD624E827CCD1400051FC92 /* SubDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD624E727CCD1400051FC92 /* SubDeviceViewController.swift */; };
+		3FD6259C27CF44E50051FC92 /* SubDeviceList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD6259B27CF44E50051FC92 /* SubDeviceList.storyboard */; };
+		3FE7C76327D59FFD007FF9A7 /* BluetoothModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7C76227D59FFD007FF9A7 /* BluetoothModeViewController.swift */; };
+		8610F9102BD8DE4900088B7B /* SpaceListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8610F90F2BD8DE4900088B7B /* SpaceListTableViewController.swift */; };
+		8610F9122BD8E4FD00088B7B /* SwitchSpaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8610F9112BD8E4FD00088B7B /* SwitchSpaceTableViewController.swift */; };
+		8610F9192BD8EE9800088B7B /* SpaceList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8610F9182BD8EE9800088B7B /* SpaceList.storyboard */; };
+		866942792A0635E1007EEC6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866942782A0635E1007EEC6E /* SceneDelegate.swift */; };
+		868BA60F2BD8EEEA00899D4F /* SwitchSpace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 868BA60E2BD8EEEA00899D4F /* SwitchSpace.storyboard */; };
 		A3C85738FBDEB2A4C8C23E49 /* libPods-TuyaIoTAppSDKSample-iOS-Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D98304E8A4DDF558E317939 /* libPods-TuyaIoTAppSDKSample-iOS-Swift.a */; };
 		AF3D7A6926551AF500E4D96C /* WiredDevice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3D7A6726551AF500E4D96C /* WiredDevice.storyboard */; };
-		AF3D7A6A26551AF500E4D96C /* ZigbeeSubdevice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3D7A6826551AF500E4D96C /* ZigbeeSubdevice.storyboard */; };
 		AF3D7A6C26552D4200E4D96C /* WiredModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D7A6B26552D4200E4D96C /* WiredModeViewController.swift */; };
 		AF3D7A6E26552E4100E4D96C /* ChooseGatewayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D7A6D26552E4100E4D96C /* ChooseGatewayTableViewController.swift */; };
-		AF3D7A70265607E900E4D96C /* ZigbeeSubdeviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D7A6F265607E900E4D96C /* ZigbeeSubdeviceTableViewController.swift */; };
-		AF3D7A7226563A9100E4D96C /* NBDeviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D7A7126563A9100E4D96C /* NBDeviceTableViewController.swift */; };
-		AF3D7A7426563B2300E4D96C /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D7A7326563B2300E4D96C /* ScannerViewController.swift */; };
 		BB7D0DD3262D1D340014490B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0DD2262D1D340014490B /* AppDelegate.swift */; };
-		BB7D0DD5262D1D340014490B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0DD4262D1D340014490B /* SceneDelegate.swift */; };
 		BB7D0DDC262D1D370014490B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB7D0DDB262D1D370014490B /* Assets.xcassets */; };
 		BB7D0E89262D1F7F0014490B /* DeviceDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0E1F262D1F7E0014490B /* DeviceDetailTableViewController.swift */; };
 		BB7D0E8A262D1F7F0014490B /* DeviceControlCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0E20262D1F7E0014490B /* DeviceControlCell.swift */; };
@@ -28,7 +37,7 @@
 		BB7D0E90262D1F7F0014490B /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0E27262D1F7E0014490B /* SwitchTableViewCell.swift */; };
 		BB7D0E91262D1F7F0014490B /* DeviceListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0E28262D1F7E0014490B /* DeviceListTableViewController.swift */; };
 		BB7D0E92262D1F7F0014490B /* DeviceControlTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0E29262D1F7E0014490B /* DeviceControlTableViewController.swift */; };
-		BB7D0E93262D1F7F0014490B /* APModeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0E2B262D1F7E0014490B /* APModeTableViewController.swift */; };
+		BB7D0E93262D1F7F0014490B /* WiFiModeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0E2B262D1F7E0014490B /* WiFiModeTableViewController.swift */; };
 		BB7D0E9A262D1F7F0014490B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0E32262D1F7E0014490B /* MainViewController.swift */; };
 		BB7D0E9B262D1F7F0014490B /* TuyaSmartMainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0E33262D1F7E0014490B /* TuyaSmartMainTableViewController.swift */; };
 		BB7D0EA5262D1F7F0014490B /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D0E3F262D1F7E0014490B /* LoginTableViewController.swift */; };
@@ -41,16 +50,13 @@
 		BB7D101B262D225A0014490B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7D0FEA262D225A0014490B /* LaunchScreen.storyboard */; };
 		BB7D101C262D225A0014490B /* TuyaSmartMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7D0FEC262D225A0014490B /* TuyaSmartMain.storyboard */; };
 		BB7D101D262D225A0014490B /* DeviceList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7D0FEE262D225A0014490B /* DeviceList.storyboard */; };
-		BB7D1020262D225A0014490B /* APMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7D0FF4262D225A0014490B /* APMode.storyboard */; };
+		BB7D1020262D225A0014490B /* WiFiMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7D0FF4262D225A0014490B /* WiFiMode.storyboard */; };
 		BB7D1022262D225A0014490B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7D0FF8262D225A0014490B /* Main.storyboard */; };
 		BB7D1024262D225A0014490B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7D0FFC262D225A0014490B /* Login.storyboard */; };
-		BB7D1067262D26B20014490B /* NewAsset.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7D1069262D26B20014490B /* NewAsset.storyboard */; };
 		BB7D108C262D2D420014490B /* AssetList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7D108E262D2D420014490B /* AssetList.storyboard */; };
 		BB7D1098262D2F5F0014490B /* AssetListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D1097262D2F5F0014490B /* AssetListTableViewController.swift */; };
 		BB7D109D262D2F700014490B /* SwitchAssetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D109C262D2F700014490B /* SwitchAssetTableViewController.swift */; };
 		BB7D10C7262D369C0014490B /* SwitchAsset.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7D10C9262D369C0014490B /* SwitchAsset.storyboard */; };
-		BB7D10D6262D54EF0014490B /* QRMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7D10D8262D54EF0014490B /* QRMode.storyboard */; };
-		BB7D10DF262D554C0014490B /* QRModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D10DE262D554C0014490B /* QRModelViewController.swift */; };
 		BB7D11B6262FD6220014490B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D11B5262FD6220014490B /* UserModel.swift */; };
 		BBE8386826318515007D7831 /* NetworkInformation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBE8386726318515007D7831 /* NetworkInformation.storyboard */; };
 		BBE83878263186DE007D7831 /* NetworkInformationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE83877263186DE007D7831 /* NetworkInformationTableViewController.swift */; };
@@ -78,18 +84,31 @@
 		0C4758EA0F5B7FB11E13D71A /* Pods-TuyaSaaSAppSDKSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaSaaSAppSDKSample.release.xcconfig"; path = "Target Support Files/Pods-TuyaSaaSAppSDKSample/Pods-TuyaSaaSAppSDKSample.release.xcconfig"; sourceTree = "<group>"; };
 		1D98304E8A4DDF558E317939 /* libPods-TuyaIoTAppSDKSample-iOS-Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TuyaIoTAppSDKSample-iOS-Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A2BC0AEEC460C0B1934A360 /* Pods-TuyaIoTAppSDKSample-iOS-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaIoTAppSDKSample-iOS-Swift.debug.xcconfig"; path = "Target Support Files/Pods-TuyaIoTAppSDKSample-iOS-Swift/Pods-TuyaIoTAppSDKSample-iOS-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		3F673B5927DF2BF60053462D /* BluetoothDualModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothDualModeViewController.swift; sourceTree = "<group>"; };
+		3F8BD0F727C36F6C00F9AD9D /* QRScanPairMode.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRScanPairMode.storyboard; sourceTree = "<group>"; };
+		3F8BD0F927C3735B00F9AD9D /* QRScanPairViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanPairViewController.swift; sourceTree = "<group>"; };
+		3F8BD10E27C4958200F9AD9D /* QRScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanViewController.swift; sourceTree = "<group>"; };
+		3FB30AD32796B3FF00BD44CA /* QRCodePair.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRCodePair.storyboard; sourceTree = "<group>"; };
+		3FB30AD52796B4A000BD44CA /* QRCodePairViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodePairViewController.swift; sourceTree = "<group>"; };
+		3FD624E727CCD1400051FC92 /* SubDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubDeviceViewController.swift; sourceTree = "<group>"; };
+		3FD6259B27CF44E50051FC92 /* SubDeviceList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SubDeviceList.storyboard; sourceTree = "<group>"; };
+		3FD840E727B4F37000AAD04F /* TuyaIoTAppSDKSample-iOS-Swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "TuyaIoTAppSDKSample-iOS-Swift.entitlements"; sourceTree = "<group>"; };
+		3FE7C76227D59FFD007FF9A7 /* BluetoothModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothModeViewController.swift; sourceTree = "<group>"; };
+		8610F90F2BD8DE4900088B7B /* SpaceListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceListTableViewController.swift; sourceTree = "<group>"; };
+		8610F9112BD8E4FD00088B7B /* SwitchSpaceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchSpaceTableViewController.swift; sourceTree = "<group>"; };
+		8610F9172BD8EE9800088B7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SpaceList.storyboard; sourceTree = "<group>"; };
+		866942782A0635E1007EEC6E /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		868BA60C2BD8EEDE00899D4F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SpaceList.strings"; sourceTree = "<group>"; };
+		868BA60D2BD8EEEA00899D4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SwitchSpace.storyboard; sourceTree = "<group>"; };
+		868BA6112BD8EEF200899D4F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SwitchSpace.strings"; sourceTree = "<group>"; };
+		86CFBD512A09E0CA008CBF30 /* NearToolSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NearToolSDK.framework; path = "../../../../../锦浪通信协议/蓝牙SDK/NearToolSDK.framework/NearToolSDK.framework"; sourceTree = "<group>"; };
 		99324FBD85CD48E805150EC9 /* Pods-TuyaSaaSAppSDKSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaSaaSAppSDKSample.debug.xcconfig"; path = "Target Support Files/Pods-TuyaSaaSAppSDKSample/Pods-TuyaSaaSAppSDKSample.debug.xcconfig"; sourceTree = "<group>"; };
 		AF3D7A6726551AF500E4D96C /* WiredDevice.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WiredDevice.storyboard; sourceTree = "<group>"; };
-		AF3D7A6826551AF500E4D96C /* ZigbeeSubdevice.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ZigbeeSubdevice.storyboard; sourceTree = "<group>"; };
 		AF3D7A6B26552D4200E4D96C /* WiredModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiredModeViewController.swift; sourceTree = "<group>"; };
 		AF3D7A6D26552E4100E4D96C /* ChooseGatewayTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseGatewayTableViewController.swift; sourceTree = "<group>"; };
-		AF3D7A6F265607E900E4D96C /* ZigbeeSubdeviceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZigbeeSubdeviceTableViewController.swift; sourceTree = "<group>"; };
-		AF3D7A7126563A9100E4D96C /* NBDeviceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBDeviceTableViewController.swift; sourceTree = "<group>"; };
-		AF3D7A7326563B2300E4D96C /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		BB29170E263AF408002AE1A8 /* TuyaIoTAppSDKSample-iOS-Swift_Bridging_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TuyaIoTAppSDKSample-iOS-Swift_Bridging_Header.h"; sourceTree = "<group>"; };
 		BB7D0DCF262D1D340014490B /* TuyaIoTAppSDKSample-iOS-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TuyaIoTAppSDKSample-iOS-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB7D0DD2262D1D340014490B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BB7D0DD4262D1D340014490B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BB7D0DDB262D1D370014490B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB7D0DE0262D1D370014490B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB7D0DE5262D1D370014490B /* TuyaIoTAppSDKSample-iOS-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TuyaIoTAppSDKSample-iOS-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,7 +123,7 @@
 		BB7D0E27262D1F7E0014490B /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		BB7D0E28262D1F7E0014490B /* DeviceListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceListTableViewController.swift; sourceTree = "<group>"; };
 		BB7D0E29262D1F7E0014490B /* DeviceControlTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceControlTableViewController.swift; sourceTree = "<group>"; };
-		BB7D0E2B262D1F7E0014490B /* APModeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APModeTableViewController.swift; sourceTree = "<group>"; };
+		BB7D0E2B262D1F7E0014490B /* WiFiModeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WiFiModeTableViewController.swift; sourceTree = "<group>"; };
 		BB7D0E32262D1F7E0014490B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BB7D0E33262D1F7E0014490B /* TuyaSmartMainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TuyaSmartMainTableViewController.swift; sourceTree = "<group>"; };
 		BB7D0E3F262D1F7E0014490B /* LoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
@@ -117,26 +136,21 @@
 		BB7D0FEB262D225A0014490B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB7D0FED262D225A0014490B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TuyaSmartMain.storyboard; sourceTree = "<group>"; };
 		BB7D0FEF262D225A0014490B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/DeviceList.storyboard; sourceTree = "<group>"; };
-		BB7D0FF5262D225A0014490B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/APMode.storyboard; sourceTree = "<group>"; };
+		BB7D0FF5262D225A0014490B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/WiFiMode.storyboard; sourceTree = "<group>"; };
 		BB7D0FF9262D225A0014490B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB7D0FFD262D225A0014490B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		BB7D1031262D22AB0014490B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		BB7D1033262D22CC0014490B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		BB7D1034262D22D00014490B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/TuyaSmartMain.strings"; sourceTree = "<group>"; };
 		BB7D1038262D22F90014490B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/DeviceList.strings"; sourceTree = "<group>"; };
-		BB7D103A262D23030014490B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/APMode.strings"; sourceTree = "<group>"; };
+		BB7D103A262D23030014490B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/WiFiMode.strings"; sourceTree = "<group>"; };
 		BB7D103D262D23140014490B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Login.strings"; sourceTree = "<group>"; };
-		BB7D106D262D26B90014490B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/NewAsset.storyboard; sourceTree = "<group>"; };
-		BB7D106F262D26F60014490B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/NewAsset.strings"; sourceTree = "<group>"; };
 		BB7D108D262D2D420014490B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AssetList.storyboard; sourceTree = "<group>"; };
 		BB7D1093262D2D4C0014490B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/AssetList.strings"; sourceTree = "<group>"; };
 		BB7D1097262D2F5F0014490B /* AssetListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetListTableViewController.swift; sourceTree = "<group>"; };
 		BB7D109C262D2F700014490B /* SwitchAssetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchAssetTableViewController.swift; sourceTree = "<group>"; };
 		BB7D10C8262D369C0014490B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SwitchAsset.storyboard; sourceTree = "<group>"; };
 		BB7D10CD262D36A50014490B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SwitchAsset.strings"; sourceTree = "<group>"; };
-		BB7D10D7262D54EF0014490B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/QRMode.storyboard; sourceTree = "<group>"; };
-		BB7D10DD262D54FA0014490B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/QRMode.strings"; sourceTree = "<group>"; };
-		BB7D10DE262D554C0014490B /* QRModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRModelViewController.swift; sourceTree = "<group>"; };
 		BB7D11B5262FD6220014490B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		BBE8386726318515007D7831 /* NetworkInformation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NetworkInformation.storyboard; sourceTree = "<group>"; };
 		BBE83877263186DE007D7831 /* NetworkInformationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInformationTableViewController.swift; sourceTree = "<group>"; };
@@ -173,9 +187,19 @@
 		52CD6C15C633AB025A201E98 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				86CFBD512A09E0CA008CBF30 /* NearToolSDK.framework */,
 				1D98304E8A4DDF558E317939 /* libPods-TuyaIoTAppSDKSample-iOS-Swift.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8610F90E2BD8DD1300088B7B /* Space Management */ = {
+			isa = PBXGroup;
+			children = (
+				8610F90F2BD8DE4900088B7B /* SpaceListTableViewController.swift */,
+				8610F9112BD8E4FD00088B7B /* SwitchSpaceTableViewController.swift */,
+			);
+			path = "Space Management";
 			sourceTree = "<group>";
 		};
 		AC81BC28FB1A63EA471CEFF0 /* Pods */ = {
@@ -212,9 +236,10 @@
 		BB7D0DD1262D1D340014490B /* TuyaIoTAppSDKSample-iOS-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				866942782A0635E1007EEC6E /* SceneDelegate.swift */,
+				3FD840E727B4F37000AAD04F /* TuyaIoTAppSDKSample-iOS-Swift.entitlements */,
 				BBFCE3EF2637B24100A0AF71 /* AppKey.swift */,
 				BB7D0DD2262D1D340014490B /* AppDelegate.swift */,
-				BB7D0DD4262D1D340014490B /* SceneDelegate.swift */,
 				BB7D0FC7262D225A0014490B /* StoryBoard */,
 				BB7D0E1D262D1F7E0014490B /* ViewController */,
 				BB7D11B4262FD5D20014490B /* Model */,
@@ -231,6 +256,7 @@
 		BB7D0E1D262D1F7E0014490B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8610F90E2BD8DD1300088B7B /* Space Management */,
 				BB7D0E1E262D1F7E0014490B /* Device Management */,
 				BB7D0E2A262D1F7E0014490B /* Device Network Configuration */,
 				BB7D0E32262D1F7E0014490B /* MainViewController.swift */,
@@ -248,6 +274,7 @@
 				BB7D0E28262D1F7E0014490B /* DeviceListTableViewController.swift */,
 				BB7D0E29262D1F7E0014490B /* DeviceControlTableViewController.swift */,
 				BB7D0E1F262D1F7E0014490B /* DeviceDetailTableViewController.swift */,
+				3FD624E727CCD1400051FC92 /* SubDeviceViewController.swift */,
 			);
 			path = "Device Management";
 			sourceTree = "<group>";
@@ -270,13 +297,14 @@
 			isa = PBXGroup;
 			children = (
 				BBE83877263186DE007D7831 /* NetworkInformationTableViewController.swift */,
-				BB7D0E2B262D1F7E0014490B /* APModeTableViewController.swift */,
-				BB7D10DE262D554C0014490B /* QRModelViewController.swift */,
+				BB7D0E2B262D1F7E0014490B /* WiFiModeTableViewController.swift */,
 				AF3D7A6B26552D4200E4D96C /* WiredModeViewController.swift */,
 				AF3D7A6D26552E4100E4D96C /* ChooseGatewayTableViewController.swift */,
-				AF3D7A6F265607E900E4D96C /* ZigbeeSubdeviceTableViewController.swift */,
-				AF3D7A7126563A9100E4D96C /* NBDeviceTableViewController.swift */,
-				AF3D7A7326563B2300E4D96C /* ScannerViewController.swift */,
+				3FB30AD52796B4A000BD44CA /* QRCodePairViewController.swift */,
+				3F8BD0F927C3735B00F9AD9D /* QRScanPairViewController.swift */,
+				3F8BD10E27C4958200F9AD9D /* QRScanViewController.swift */,
+				3FE7C76227D59FFD007FF9A7 /* BluetoothModeViewController.swift */,
+				3F673B5927DF2BF60053462D /* BluetoothDualModeViewController.swift */,
 			);
 			path = "Device Network Configuration";
 			sourceTree = "<group>";
@@ -305,17 +333,19 @@
 			children = (
 				BB7D0FF8262D225A0014490B /* Main.storyboard */,
 				BB7D0FEC262D225A0014490B /* TuyaSmartMain.storyboard */,
-				BB7D1069262D26B20014490B /* NewAsset.storyboard */,
 				BB7D108E262D2D420014490B /* AssetList.storyboard */,
 				BB7D10C9262D369C0014490B /* SwitchAsset.storyboard */,
 				BB7D0FEE262D225A0014490B /* DeviceList.storyboard */,
 				BB7D0FFC262D225A0014490B /* Login.storyboard */,
 				BBE8386726318515007D7831 /* NetworkInformation.storyboard */,
 				AF3D7A6726551AF500E4D96C /* WiredDevice.storyboard */,
-				AF3D7A6826551AF500E4D96C /* ZigbeeSubdevice.storyboard */,
-				BB7D0FF4262D225A0014490B /* APMode.storyboard */,
-				BB7D10D8262D54EF0014490B /* QRMode.storyboard */,
+				BB7D0FF4262D225A0014490B /* WiFiMode.storyboard */,
 				BB7D0FEA262D225A0014490B /* LaunchScreen.storyboard */,
+				3FB30AD32796B3FF00BD44CA /* QRCodePair.storyboard */,
+				3F8BD0F727C36F6C00F9AD9D /* QRScanPairMode.storyboard */,
+				3FD6259B27CF44E50051FC92 /* SubDeviceList.storyboard */,
+				868BA60E2BD8EEEA00899D4F /* SwitchSpace.storyboard */,
+				8610F9182BD8EE9800088B7B /* SpaceList.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";
@@ -403,7 +433,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					BB7D0DCE262D1D340014490B = {
 						CreatedOnToolsVersion = 12.4;
@@ -444,22 +474,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB7D1020262D225A0014490B /* APMode.storyboard in Resources */,
-				AF3D7A6A26551AF500E4D96C /* ZigbeeSubdevice.storyboard in Resources */,
+				BB7D1020262D225A0014490B /* WiFiMode.storyboard in Resources */,
 				BB7D0ED4262D1F8A0014490B /* Localizable.strings in Resources */,
 				BB7D0ED3262D1F8A0014490B /* InfoPlist.strings in Resources */,
 				BB7D101D262D225A0014490B /* DeviceList.storyboard in Resources */,
 				BB7D1022262D225A0014490B /* Main.storyboard in Resources */,
+				8610F9192BD8EE9800088B7B /* SpaceList.storyboard in Resources */,
 				BB7D1024262D225A0014490B /* Login.storyboard in Resources */,
 				BB7D0DDC262D1D370014490B /* Assets.xcassets in Resources */,
 				BB7D10C7262D369C0014490B /* SwitchAsset.storyboard in Resources */,
 				BB7D101C262D225A0014490B /* TuyaSmartMain.storyboard in Resources */,
+				868BA60F2BD8EEEA00899D4F /* SwitchSpace.storyboard in Resources */,
 				BB7D108C262D2D420014490B /* AssetList.storyboard in Resources */,
-				BB7D1067262D26B20014490B /* NewAsset.storyboard in Resources */,
 				BBE8386826318515007D7831 /* NetworkInformation.storyboard in Resources */,
-				BB7D10D6262D54EF0014490B /* QRMode.storyboard in Resources */,
+				3FB30AD42796B3FF00BD44CA /* QRCodePair.storyboard in Resources */,
+				3F8BD0F827C36F6C00F9AD9D /* QRScanPairMode.storyboard in Resources */,
 				BB7D101B262D225A0014490B /* LaunchScreen.storyboard in Resources */,
 				AF3D7A6926551AF500E4D96C /* WiredDevice.storyboard in Resources */,
+				3FD6259C27CF44E50051FC92 /* SubDeviceList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,36 +576,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB7D0E9A262D1F7F0014490B /* MainViewController.swift in Sources */,
-				BB7D10DF262D554C0014490B /* QRModelViewController.swift in Sources */,
 				BB7D0E9B262D1F7F0014490B /* TuyaSmartMainTableViewController.swift in Sources */,
+				3FE7C76327D59FFD007FF9A7 /* BluetoothModeViewController.swift in Sources */,
 				BB7D0E91262D1F7F0014490B /* DeviceListTableViewController.swift in Sources */,
 				BB7D0EA7262D1F7F0014490B /* UIButtonExtension.swift in Sources */,
 				BB7D0E8E262D1F7F0014490B /* StringTableViewCell.swift in Sources */,
 				BB7D0E90262D1F7F0014490B /* SwitchTableViewCell.swift in Sources */,
 				AF3D7A6E26552E4100E4D96C /* ChooseGatewayTableViewController.swift in Sources */,
+				3F673B5A27DF2BF60053462D /* BluetoothDualModeViewController.swift in Sources */,
 				BB7D0DD3262D1D340014490B /* AppDelegate.swift in Sources */,
 				BB7D0EA8262D1F7F0014490B /* Alert.swift in Sources */,
 				BB7D109D262D2F700014490B /* SwitchAssetTableViewController.swift in Sources */,
-				AF3D7A7226563A9100E4D96C /* NBDeviceTableViewController.swift in Sources */,
-				BB7D0E93262D1F7F0014490B /* APModeTableViewController.swift in Sources */,
+				BB7D0E93262D1F7F0014490B /* WiFiModeTableViewController.swift in Sources */,
 				BB7D0E8B262D1F7F0014490B /* LabelTableViewCell.swift in Sources */,
 				BB7D0E89262D1F7F0014490B /* DeviceDetailTableViewController.swift in Sources */,
-				AF3D7A7426563B2300E4D96C /* ScannerViewController.swift in Sources */,
-				AF3D7A70265607E900E4D96C /* ZigbeeSubdeviceTableViewController.swift in Sources */,
 				BB7D0E92262D1F7F0014490B /* DeviceControlTableViewController.swift in Sources */,
+				8610F9102BD8DE4900088B7B /* SpaceListTableViewController.swift in Sources */,
 				AF3D7A6C26552D4200E4D96C /* WiredModeViewController.swift in Sources */,
+				3FD624E827CCD1400051FC92 /* SubDeviceViewController.swift in Sources */,
 				BB7D0EAA262D1F7F0014490B /* UIViewControllerExtension.swift in Sources */,
 				BB7D0EA9262D1F7F0014490B /* NotificationName.swift in Sources */,
 				BBFCE3F02637B24100A0AF71 /* AppKey.swift in Sources */,
 				BBE83878263186DE007D7831 /* NetworkInformationTableViewController.swift in Sources */,
+				3F8BD0FA27C3735B00F9AD9D /* QRScanPairViewController.swift in Sources */,
 				BB7D1098262D2F5F0014490B /* AssetListTableViewController.swift in Sources */,
 				BB7D0E8C262D1F7F0014490B /* SliderTableViewCell.swift in Sources */,
 				BB7D0EA5262D1F7F0014490B /* LoginTableViewController.swift in Sources */,
 				BB7D11B6262FD6220014490B /* UserModel.swift in Sources */,
+				8610F9122BD8E4FD00088B7B /* SwitchSpaceTableViewController.swift in Sources */,
 				BB7D0E8F262D1F7F0014490B /* EnumTableViewCell.swift in Sources */,
 				BB7D0E8A262D1F7F0014490B /* DeviceControlCell.swift in Sources */,
+				866942792A0635E1007EEC6E /* SceneDelegate.swift in Sources */,
 				BB7D0E8D262D1F7F0014490B /* DeviceStatusBehaveCell.swift in Sources */,
-				BB7D0DD5262D1D340014490B /* SceneDelegate.swift in Sources */,
+				3F8BD10F27C4958200F9AD9D /* QRScanViewController.swift in Sources */,
+				3FB30AD62796B4A000BD44CA /* QRCodePairViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,6 +643,24 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		8610F9182BD8EE9800088B7B /* SpaceList.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8610F9172BD8EE9800088B7B /* Base */,
+				868BA60C2BD8EEDE00899D4F /* zh-Hans */,
+			);
+			name = SpaceList.storyboard;
+			sourceTree = "<group>";
+		};
+		868BA60E2BD8EEEA00899D4F /* SwitchSpace.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				868BA60D2BD8EEEA00899D4F /* Base */,
+				868BA6112BD8EEF200899D4F /* zh-Hans */,
+			);
+			name = SwitchSpace.storyboard;
+			sourceTree = "<group>";
+		};
 		BB7D0ECF262D1F8A0014490B /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -650,13 +704,13 @@
 			name = DeviceList.storyboard;
 			sourceTree = "<group>";
 		};
-		BB7D0FF4262D225A0014490B /* APMode.storyboard */ = {
+		BB7D0FF4262D225A0014490B /* WiFiMode.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				BB7D0FF5262D225A0014490B /* Base */,
 				BB7D103A262D23030014490B /* zh-Hans */,
 			);
-			name = APMode.storyboard;
+			name = WiFiMode.storyboard;
 			sourceTree = "<group>";
 		};
 		BB7D0FF8262D225A0014490B /* Main.storyboard */ = {
@@ -677,15 +731,6 @@
 			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
-		BB7D1069262D26B20014490B /* NewAsset.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BB7D106D262D26B90014490B /* Base */,
-				BB7D106F262D26F60014490B /* zh-Hans */,
-			);
-			name = NewAsset.storyboard;
-			sourceTree = "<group>";
-		};
 		BB7D108E262D2D420014490B /* AssetList.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -704,15 +749,6 @@
 			name = SwitchAsset.storyboard;
 			sourceTree = "<group>";
 		};
-		BB7D10D8262D54EF0014490B /* QRMode.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BB7D10D7262D54EF0014490B /* Base */,
-				BB7D10DD262D54FA0014490B /* zh-Hans */,
-			);
-			name = QRMode.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -720,6 +756,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -781,6 +819,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -836,19 +876,24 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3A2BC0AEEC460C0B1934A360 /* Pods-TuyaIoTAppSDKSample-iOS-Swift.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CODE_SIGN_ENTITLEMENTS = "TuyaIoTAppSDKSample-iOS-Swift/TuyaIoTAppSDKSample-iOS-Swift.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 64ZYG66RMG;
+				DEVELOPMENT_TEAM = 94JFPTRDN5;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TuyaIoTAppSDKSample-iOS-Swift/vendor",
+				);
 				INFOPLIST_FILE = "TuyaIoTAppSDKSample-iOS-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "im.wut.TuyaIoTAppSDK-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iotappsample.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TuyaIoTAppSDKSample-iOS-Swift/TuyaIoTAppSDKSample-iOS-Swift_Bridging_Header.h";
 				SWIFT_VERSION = 5.0;
@@ -863,15 +908,21 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CODE_SIGN_ENTITLEMENTS = "TuyaIoTAppSDKSample-iOS-Swift/TuyaIoTAppSDKSample-iOS-Swift.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 64ZYG66RMG;
+				DEVELOPMENT_TEAM = YU53J7686A;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TuyaIoTAppSDKSample-iOS-Swift/vendor",
+				);
 				INFOPLIST_FILE = "TuyaIoTAppSDKSample-iOS-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "im.wut.TuyaIoTAppSDK-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = com.smart.;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TuyaIoTAppSDKSample-iOS-Swift/TuyaIoTAppSDKSample-iOS-Swift_Bridging_Header.h";
 				SWIFT_VERSION = 5.0;
@@ -885,6 +936,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = "TuyaIoTAppSDKSample-iOS-SwiftTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -906,6 +958,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = "TuyaIoTAppSDKSample-iOS-SwiftTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -926,13 +979,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YU53J7686A;
 				INFOPLIST_FILE = "TuyaIoTAppSDKSample-iOS-SwiftUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.TuyaSaaSAppSDK.Sample.TuyaSaaSAppSDKSampleUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smart.industry;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -945,13 +999,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YU53J7686A;
 				INFOPLIST_FILE = "TuyaIoTAppSDKSample-iOS-SwiftUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.TuyaSaaSAppSDK.Sample.TuyaSaaSAppSDKSampleUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smart.industry;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -5,39 +5,40 @@
 //  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
 
 import UIKit
-import TuyaIoTAppSDK
+import IndustryAssetKit
+import IndustrySpaceKit
+import IndustryUserKit
 
 class UserModel: NSObject {
-    static let shared = UserModel(userName: "", asset: nil)
+    static let shared = UserModel(userName: "", asset: nil, space: nil)
     
     var userName: String
-    var asset: TYVagueAsset?
+    var asset: IAsset?
+    var space: ISpace?
     
-    private init(userName: String, asset: TYVagueAsset?) {
-        self.userName = userName
-        self.asset = asset
+    var isSpace: Bool {
+        get {
+            return UserService.shared().user()?.spaceType == 1
+        }
     }
     
-    class func location() -> TYHostRegion {
-        let location = UserDefaults.standard.string(forKey: "UserLocation") ?? "China"
-        var type: TYHostRegion
-        switch location {
-        case "China":
-            type = .CN
-        case "America":
-            type = .US
-        case "Europe":
-            type = .EU
-        case "India":
-            type = .IN
-        case "Eastern America":
-            type = .UE
-        case "Western Europe":
-            type = .WE
-        default:
-            type = .custom
+    private init(userName: String, asset: IAsset?, space: ISpace?) {
+        self.userName = userName
+        self.asset = asset
+        self.space = space
+    }
+    
+    public func getGid() -> String? {
+        if self.isSpace {
+            if let space = self.space {
+                return space.spaceId
+            }
+        } else {
+            if let asset = self.asset {
+                return asset.assetId
+            }
         }
-        return type
+        return ""
     }
 }
 
