@@ -62,78 +62,74 @@ This section describes the steps to configure an industry project on top of Clou
 >	Tuya provides [IoT Core](https://www.tuya.com/vas/tmpl/apply?code=IOT_CORE) that drives your success with industry-specific device connection and management capabilities. This service can quickly integrate with existing systems and boost your development of IoT core applications targeted to different industry scenarios.
 
 
-## Create an application
-
-This section describes how to create an application in the cloud project.
-
-1. Open your cloud project.
-
-2. Choose **Authorization** > **App Authorization**.
-
-	![App Authorization](https://airtake-public-data-1254153901.cos.ap-shanghai.myqcloud.com/content-platform/hestia/1638959749fee62767c17.png)
-
-3. In the **Add Application** dialog box, configure the application information. Select an application type for **Android** or **iOS**.
-
-	<img src="https://airtake-public-data-1254153901.cos.ap-shanghai.myqcloud.com/content-platform/hestia/16389595617bdc33fa878.png" width="550">
-
-4. Enter the information in the fields for the specified application type. If you select the application for Android, you must get the value of **SHA1**. For more information, see [How to Get SHA1 and SHA256 Keys](https://developer.tuya.com/en/docs/app-development/iot_app_sdk_core_sha1?id=Kao7c7b139vrh).
-
-> **Important:**
->	The generated keystore file and encryption information must be kept well. They will be used for subsequent [SDK integration](https://developer.tuya.com/en/docs/app-development/iot_app_sdk_core_integrate?id=Kao6tmwqq0va3).
-
-
 ## Quick Start
 
-1. The Tuya Industry App SDK is distributed through [CocoaPods](http://cocoapods.org/) and other dependencies in this sample. Make sure that you have installed CocoaPods. If not, run the following command to install CocoaPods first:
+### Integrate SDK
+Execute `$ pod update` and the downloaded SDK will be automatically integrated into the iOS project.
 
-```bash
-sudo gem install cocoapods
-pod setup
+### Package name
+- Open the project settings, click **Target** > **General**, and then modify **Bundle Identifier** to the iOS Bundle ID set on the Tuya IoT Platform
+
+### Secret Info
+<img src="https://airtake-public-data-1254153901.cos.ap-shanghai.myqcloud.com/content-platform/hestia/1682247340ea33064cc2d.png" width="650"/>
+
+### Cloud project Info
+The user needs the projectCode information when logging in.
+<img src="https://images.tuyacn.com/rms-static/ae4d89e0-11d8-11ef-9eac-b120705c4c0c-1715680780670.png?tyName=smart-industry-link-ios-cloudproject-info-en.png" width="650" />
+
+### Authorization in cloud project
+When initializing the SDK, you need the Client ID and Client Secret information.
+<img src="https://images.tuyacn.com/rms-static/35886c50-11c4-11ef-8f06-49ae7b2fadcf-1715671988117.png?tyName=52c2d9ad-2aa1-43d9-a054-8e42a352ee1b.png" width="650"/>
+
+### Initialize the SDK
+Objective-C
+```objc
+// init url
+[IndustryLinkSDK setHost:<#your_app_host#>];
+
+// IndustryLinkSDK
+[IndustryLinkSDK initializeWithAppKey:<#your_app_key#>
+                            appSecret:<#your_app_secret_key#>
+                             clientId:<#your_clientId#>
+                         clientSecret:<#your_client_secret#>];
+
+[MQTTBusinessPlugin initializePlugin];
+```   
+Swift
+```
+// init url
+IndustryLinkSDK.host = <#your_app_host#>
+
+// IndustryLinkSDK
+IndustryLinkSDK.initialize(withAppKey: <#your_app_key#>, 
+                            appSecret: <#your_app_secret_key#>, 
+                            clientId: <#your_clientId#>, 
+                            clientSecret: <#your_client_secret#>)
+
+// If need mqtt
+MQTTBusinessPlugin.initializePlugin()
 ```
 
-2. Clone or download this sample, change the directory to the one that includes **Podfile**, and then run the following command:
+> **Note**
+> In the Preparation topic, get the `AppKey`, `AppSecret`, `BundleId`, `ClientId` and `ClientSecret` for iOS. Make sure that the values are consistent with those used on the Tuya IoT Platform. Any mismatch will cause the SDK development or demo app to be failed.
+> Please initialize the host using the domain names from the domain.txt file downloaded from the platform.
 
-```bash
-pod install
+The requested host must be consistent with the data center of the cloud project, as the data in different data centers is isolated from one another.
+```
+AY: China Data Center
+EU: Central Europe Data Center
+AZ: Western America Data Center
+WE: Western Europe Data Center
+UE: Eastern America Data Center
+IN: India Data Center
 ```
 
-3. Obtain the Client ID and Client Secret of the created iOS application on the **Applications**>**App**.
-   <img src="https://images.tuyacn.com/app/hass/ios_keys_intro.png" style="zoom:50%;" />
-4. Open the `TuyaIoTAppSDKSample-iOS-Swift.xcworkspace` pod generated for you.
+## Notes
+Development version SDK is for testing purposes only, not for commercial use. To use in commercial scenarios, please purchase the formal version SDK on the platform.
 
-5. Fill in the AppKey and AppSecret in the **AppKey.swift** file.
-
-```swift
-struct AppKey {
-    static let appKey = "Client ID"
-    static let secretKey = "Client Secret"
-}
-```
-
-**Note**: The bundle ID, AppKey, and AppSecret must be the same as your app on the [Tuya IoT Platform](https://iot.tuya.com). Otherwise, the sample cannot request the API.
-
-## Sample App Features Overview
-
-### Account Login
-
-<img src="https://images.tuyacn.com/app/IoTAppSDK/ios_iot_sdk_login.png" width="30%" /> 
-<img src="https://images.tuyacn.com/app/IoTAppSDK/ios_sample_home.png" width="30%" /> 
-
-### Swich Asset
-
-<img src="https://images.tuyacn.com/app/IoTAppSDK/ios_iot_sdk_switchAsset.png" width="30%" /> 
-
-### Device Network Pairing
-
-<img src="https://images.tuyacn.com/app/IoTAppSDK/ios_iot_sdk_ap.png" width="30%" /> 
-<img src="https://images.tuyacn.com/app/IoTAppSDK/ios_iot_sdk_qrMode.png" width="30%" /> 
-<img src="https://images.tuyacn.com/app/IoTAppSDK/android_nb_device.png" width="30%" /> 
-<img src="https://images.tuyacn.com/app/IoTAppSDK/ios_wired_home.png" width="30%" /> 
-
-### Device List and Details
-
-<img src="https://images.tuyacn.com/app/IoTAppSDK/ios_iot_sdk_deviceList.png" width="30%" /> 
-<img src="https://images.tuyacn.com/app/IoTAppSDK/ios_iot_sdk_deviceDetail2.png" width="30%" /> 
+**After purchasing the formal version SDK:**
+1. You need to rebuild and download the formal version SDK on the IoT platform.
+2. Reintegrate the formal version SDK into your project.
 
 ## Issue Feedback
 
