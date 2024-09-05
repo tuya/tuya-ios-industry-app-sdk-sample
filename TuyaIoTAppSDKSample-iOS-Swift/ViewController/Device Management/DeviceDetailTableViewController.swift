@@ -6,6 +6,8 @@
 
 import UIKit
 import IndustryDeviceKit
+import IndustryActivatorKit
+import IndustryDeviceImpl
 
 class DeviceDetailTableViewController: UITableViewController {
     
@@ -15,7 +17,10 @@ class DeviceDetailTableViewController: UITableViewController {
     @IBOutlet weak var ipAddressLabel: UILabel!
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var removeDeviceButton: UIButton!
+    @IBOutlet weak var blewifiCloud: UILabel!
     var newName: String = ""
+    var wifiEnable: Bool = false
+    var pair = ActivatorService.shared.activator(.BLEWIFICloud)
     
     // MARK: - Property
     var device: IDevice?
@@ -27,6 +32,17 @@ class DeviceDetailTableViewController: UITableViewController {
         deviceIDLabel.text = device?.deviceId
         productName.text = device?.name
         device?.delegate = self
+        
+        var meta = device?.meta
+        if let wifiEnable = meta?["wifiEnable"], wifiEnable as! Bool == false {
+            print("WiFi is disabled.")
+            self.blewifiCloud.text = "false"
+            self.wifiEnable = false
+        } else {
+            self.blewifiCloud.text = "true"
+            self.wifiEnable = true
+            print("WiFi is enabled.")
+        }
     }
 
     // MARK: - IBAction
@@ -92,13 +108,18 @@ class DeviceDetailTableViewController: UITableViewController {
         if indexPath.section == 0 && indexPath.row == 2 {
             updateDeviceName()
         }
+        else if indexPath.section == 0 && indexPath.row == 3 {
+            let iDevice = IndustryDevice(deviceId: device?.deviceId ?? "")
+            iDevice.connectBLE {
+                self.pair.startPair(BLEWIFICloudActivatorParams(devId: (self.device?.deviceId)!, ssid: "", password: ""))
+            } failure: {
+                
+            }
+        }
         
         guard indexPath.section == 1 else { return }
         removeDeviceButton.sendActions(for: .touchUpInside)
-        
-        
     }
-    
 }
 
 

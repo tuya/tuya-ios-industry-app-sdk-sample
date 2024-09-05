@@ -7,7 +7,7 @@ target 'TuyaIoTAppSDKSample-iOS-Swift' do
   pod 'Masonry', :modular_headers => true
 
   pod 'ThingSmartCryption', :path => './'
-  pod 'IndustryLinkSDK', '2.2.0-indy.2'
+  pod 'IndustryLinkSDK', '2.3.0-indy.3'
 
 end
 

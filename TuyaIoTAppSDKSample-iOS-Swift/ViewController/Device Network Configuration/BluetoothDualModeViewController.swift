@@ -17,14 +17,19 @@ class BluetoothDualModeViewController: UITableViewController {
     var deviceInfos = [String: ISmartBLEAdv]()
     var isActiving = false
     var isScan = false
+    var pairingToken = ""
     var ssid: String = "your wifi name"
     var password: String = "your wifi password"
     
     var discovery = DiscoveryService.shared.discovery(.BLEWIFI)
     var pair = ActivatorService.shared.activator(.BLEWIFI)
-
+    
     init() {
         super.init(style: UITableView.Style.insetGrouped)
+        
+        let barButtonItem = UIBarButtonItem.init(title: "getToken", style: .plain, target: self, action: #selector(requestToken))
+        barButtonItem.tintColor = UIColor.black
+        self.navigationItem.rightBarButtonItem = barButtonItem
     }
     
     required init?(coder: NSCoder) {
@@ -99,9 +104,9 @@ class BluetoothDualModeViewController: UITableViewController {
         
         SVProgressHUD.show()
         self.isActiving = true
-
+        
         self.pair.listener = self;
-        self.pair.startPair(BLEWIFIActivatorParams(deviceInfo: devInfo, assetId: assetID, ssid: self.ssid, password: self.password))
+        self.pair.startPair(BLEWIFIActivatorParams(deviceInfo: devInfo, assetId: assetID, pairToken: self.pairingToken, ssid: self.ssid, password: self.password, onlyConnectBle: true))
     }
     
     func stopPair() {
@@ -140,6 +145,33 @@ class BluetoothDualModeViewController: UITableViewController {
         }))
         
         self.navigationController?.present(alert, animated: true)
+    }
+    
+    @objc func requestToken() {
+        guard let assetID = UserModel.shared.getGid() else {
+            SVProgressHUD.showInfo(withStatus: "Please select asset firstly")
+            return
+        }
+        
+        SVProgressHUD.show()
+        ActivatorService.shared.activatorToken(assetId: assetID, longitude: nil, latitude: nil) { [weak self] token in
+            guard let self = self else { return }
+            
+            // 确保字符串长度足够
+            guard token.count >= 10 else {
+                fatalError("token is invalid")
+            }
+
+            let startIndex = token.index(token.startIndex, offsetBy: 2)
+            let endIndex = token.index(startIndex, offsetBy: 8)
+            let substring = token[startIndex..<endIndex]
+            self.pairingToken = String(substring)
+            print("token = \(self.pairingToken)")
+            SVProgressHUD.dismiss()
+        } failure: { error in
+            SVProgressHUD.dismiss()
+            SVProgressHUD.showError(withStatus: error.localizedDescription)
+        }
     }
 }
 

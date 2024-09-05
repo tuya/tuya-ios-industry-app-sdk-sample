@@ -33,7 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // Will go into scene delegate
             
         } else {
-            
             if let isLogin = UserService.shared().user()?.isLogin() {
                 print("登录成功：\(isLogin)")
                 let storyboard = UIStoryboard(name: "TuyaSmartMain", bundle: nil)
