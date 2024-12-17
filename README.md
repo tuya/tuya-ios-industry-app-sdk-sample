@@ -11,10 +11,6 @@ Industry App SDK Sample has the following functions:
 - Equipment distribution module (AP, QRcode mode)
 - Equipment module (equipment query, equipment unbinding)
 
-## API Reference Docs
-
-iOS Industry App SDK API Reference: https://tuya.github.io/tuya-ios-iot-app-sdk-sample/
-
 ## Prerequisites
 
 1. A developer account is registered on the [Tuya IoT Development Platform](https://auth.tuya.com/register?from=https%3A%2F%2Fdeveloper.tuya.com%2Fcn%2Fdocs%2Fapp-development%2F).
