@@ -1,6 +1,4 @@
-source 'https://cocoapods.tuya-inc.top:7799/'
 source 'git@github.com:tuya/tuya-pod-specs.git'
-
 
 target 'TuyaIoTAppSDKSample-iOS-Swift' do
   pod 'SVProgressHUD'
